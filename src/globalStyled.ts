@@ -9,4 +9,10 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-family: "League Spartan", sans-serif;;
     }
+
+    #root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
 `

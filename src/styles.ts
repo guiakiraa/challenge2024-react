@@ -81,3 +81,90 @@ export const NavMenu = styled.nav`
         }
     }
 `
+
+export const MainGeral = styled.main`
+    flex-grow: 1;
+    background-color: #00345A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+
+export const SecFormEntrar = styled.section`
+    background-color: #074C7E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 70px 100px;
+    border-radius: 15px;
+
+    h2 {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 40px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        background-color: #074C7E;
+
+        .linha-form {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .campo-texto {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .campo-check {
+            align-self: flex-start;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+        }        
+
+        label {
+            color: white;
+            display: block;
+            font-size: 18px;
+        }
+
+        input {
+            background-color: white;
+            border: none;
+            font-size: 16px;
+        }
+
+        #lembrarLogin {
+            width: 20px;
+            height: 20px;
+        }
+
+        button {
+            margin: auto;
+            text-align: center;
+            background-color: #0066FF;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 10px 30px;
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #2211cc;
+        }
+    }
+`

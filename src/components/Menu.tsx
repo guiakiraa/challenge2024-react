@@ -6,6 +6,7 @@ export default function Menu() {
     return (
         <NavMenu>
             <ul>
+                <li><Link to='/'><i className="fa-solid fa-house"></i></Link></li>
                 <li><Link to='/diagnostico'>Diagnóstico</Link></li>
                 <li><Link to='historico'>Histórico</Link></li>
                 <li><Link to='/entrar'>Entrar</Link></li>
