@@ -83,12 +83,95 @@ export const NavMenu = styled.nav`
 `
 
 export const MainGeral = styled.main`
-    flex-grow: 1;
-    background-color: #00345A;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`
+
+export const DivTituloEquipe = styled.div`
+    margin-left: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    i {
+        font-size: 35px;
+    }
+
+    h2 {
+        color: #00345a;
+        font-size: 35px;
+    }
+`
+
+export const DivMembros = styled.div`
+    background-color: #8DD1F1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 0;
+`
+
+export const DivCardMembro = styled.div`
+    height: 500px;
+    width: 350px;
+    border-radius: 12px;
+    background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 10px;
+
+    img {
+        width: 250px;
+    }
+
+    h3 {
+        font-size: 25px;
+        color: #00345A;
+    }
+
+    .container {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+
+
+        .social {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            i {
+                font-size: 23px;
+            }
+
+            .fa-linkedin {
+                color: #0e76a8;
+            }
+        }
+
+
+
+        
+        a {
+            text-decoration: none;
+            color: #00345A;
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        p {
+            color: #00345A;
+        }
+    }
+
 `
 
 export const SecFormEntrar = styled.section`

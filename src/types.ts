@@ -1,11 +1,22 @@
 export type BannerProps = {
-    fundoUrl: string;
+    fundoUrl?: string;
     titulo: string;
-    paragrafo: string;
+    paragrafo?: string;
 }
 
 export type DivBannerProps = {
     imagemFundo: string;
+}
+
+export type CardMembroProps = {
+    foto: string;
+    nome: string;
+    linkGithub: string;
+    github: string;
+    linkLinkedin: string;
+    linkedin: string;
+    rm: number;
+    turma: string;
 }
 
 export type FormularioProps = {
