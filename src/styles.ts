@@ -48,10 +48,22 @@ export const NavMenu = styled.nav`
     align-items: center;
     justify-content: center;
 
+    img {
+        margin-left: 20px;
+        width: 100px;
+    }
+
     ul {
+        width: 100%;
         list-style: none;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            align-items: center;
+        }
 
         li {
             padding: 20px 0;
