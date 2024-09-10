@@ -1,8 +1,7 @@
 import { useCallback, useState } from "react"
-import { FormularioProps } from "../types"
 import { useNavigate } from "react-router-dom";
-import { SecForm } from "../styles";
-
+import { SecForm } from "../../styles";
+import { FormularioProps } from "../../types";
 export default function Formulario() {
 
     const [formState, setFormState] = useState<FormularioProps>({
