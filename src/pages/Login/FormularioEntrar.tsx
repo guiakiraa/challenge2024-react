@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react"
 import { FormularioProps } from "../types"
 import { useNavigate } from "react-router-dom";
-import { SecFormEntrar } from "../styles";
+import { SecForm } from "../styles";
 
 export default function Formulario() {
 
@@ -47,7 +47,7 @@ export default function Formulario() {
     )
 
     return (
-        <SecFormEntrar>
+        <SecForm>
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <div className="campo-texto">
@@ -86,6 +86,6 @@ export default function Formulario() {
                     Enviar
                 </button>
             </form>
-        </SecFormEntrar>
+        </SecForm>
     )
 }

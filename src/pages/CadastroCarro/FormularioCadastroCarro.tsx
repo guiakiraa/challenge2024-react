@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { SecFormEntrar } from "../styles";
-import { FormularioCarroProps } from "../types";
+import { SecForm } from "../../styles";
+import { FormularioCarroProps } from "../../types";
 import { useCallback, useState } from "react";
 
 
@@ -50,7 +50,7 @@ export default function FormularioCadastroCarro() {
     )
 
     return (
-        <SecFormEntrar>
+        <SecForm>
             <h2>Cadastro Carro</h2>
             <form onSubmit={handleSubmit}>
                 <div className="campo-texto">
@@ -112,6 +112,6 @@ export default function FormularioCadastroCarro() {
                     Enviar
                 </button>
             </form>
-        </SecFormEntrar>
+        </SecForm>
     )
 }

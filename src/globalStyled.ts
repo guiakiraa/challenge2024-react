@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
     * {
@@ -11,8 +11,11 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     #root {
+        width: 100%;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
     }
 `
+
+export default GlobalStyle

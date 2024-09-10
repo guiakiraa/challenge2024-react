@@ -1,5 +1,5 @@
-import { DivCardMembro } from "../styles";
-import { CardMembroProps } from "../types";
+import { DivCardMembro } from "../../styles";
+import { CardMembroProps } from "../../types";
 
 export default function CardMembro({foto, nome, linkGithub, github, linkLinkedin, linkedin, rm, turma}: CardMembroProps) {
 

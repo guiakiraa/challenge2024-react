@@ -1,6 +1,6 @@
-import FormularioCadastroCarro from "../../components/FormularioCadastroCarro";
+import FormularioCadastroCarro from "./FormularioCadastroCarro";
 import Menu from "../../components/Menu";
-import { MainGeral } from "../../styles";
+import { MainForm } from "../../styles";
 
 
 export default function CadastroCarro() {
@@ -8,9 +8,9 @@ export default function CadastroCarro() {
     return (
         <>
             <Menu />
-            <MainGeral>
+            <MainForm>
                 <FormularioCadastroCarro />
-            </MainGeral>
+            </MainForm>
         </>
     )
 }

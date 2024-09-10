@@ -1,4 +1,4 @@
-import { DivTituloEquipe } from "../styles";
+import { DivTituloEquipe } from "../../styles";
 
 
 

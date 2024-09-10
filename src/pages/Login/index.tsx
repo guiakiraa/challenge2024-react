@@ -1,15 +1,15 @@
-import FormularioEntrar from "../../components/FormularioEntrar";
+import FormularioEntrar from './FormularioEntrar'
 import Menu from "../../components/Menu";
-import { MainGeral } from "../../styles";
+import { MainForm } from "../../styles";
 
 export default function Login() {
 
     return (
         <>
             <Menu />
-            <MainGeral>
-            <FormularioEntrar />
-            </MainGeral>
+            <MainForm>
+                <FormularioEntrar />
+            </MainForm>
         </>
     )
 }

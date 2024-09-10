@@ -1,7 +1,7 @@
 import { useCallback, useState } from "react"
 import { useNavigate } from "react-router-dom";
-import { SecFormEntrar } from "../styles";
-import { Endereco, FormularioUsuarioProps } from "../types";
+import { SecForm } from "../../styles";
+import { Endereco, FormularioUsuarioProps } from "../../types";
 
 export default function FormularioCadastroUsuario() {
 
@@ -95,7 +95,7 @@ export default function FormularioCadastroUsuario() {
     };
 
     return (
-        <SecFormEntrar>
+        <SecForm>
             <h2>Cadastro Usuário</h2>
             <form onSubmit={handleSubmit}>
                 <div className="linha-form">
@@ -216,6 +216,6 @@ export default function FormularioCadastroUsuario() {
                     Enviar
                 </button>
             </form>
-        </SecFormEntrar>
+        </SecForm>
     )
 }

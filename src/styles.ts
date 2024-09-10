@@ -82,9 +82,17 @@ export const NavMenu = styled.nav`
     }
 `
 
-export const MainGeral = styled.main`
-    min-height: 100vh;
+export const MainPags = styled.main`
     background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+`
+
+export const MainForm = styled.main`
+    background-color: #074c7e;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -174,14 +182,14 @@ export const DivCardMembro = styled.div`
 
 `
 
-export const SecFormEntrar = styled.section`
+export const SecForm = styled.section`
     background-color: #074C7E;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
-    padding: 70px 100px;
     border-radius: 15px;
+    padding: 50px 0;
 
     h2 {
         text-transform: uppercase;

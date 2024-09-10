@@ -1,15 +1,15 @@
-import FormularioCadastroUsuario from "../../components/FormularioCadastroUsuario";
+import FormularioCadastroUsuario from "./FormularioCadastroUsuario";
 import Menu from "../../components/Menu";
-import { MainGeral } from "../../styles";
+import { MainForm } from "../../styles";
 
 export default function CadastroUsuario() {
 
     return (
         <>
             <Menu />
-            <MainGeral>
+            <MainForm>
                 <FormularioCadastroUsuario />
-            </MainGeral>
+            </MainForm>
         </>
     )
 }
