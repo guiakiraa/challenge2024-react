@@ -271,3 +271,70 @@ export const SecForm = styled.section`
         }
     }
 `
+
+export const PerfilContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+`;
+
+export const PerfilImg = styled.div`
+  margin-bottom: 20px;
+
+  .profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .edit-button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .edit-button:hover {
+    background-color: #0056b3;
+  }
+`;
+
+export const ProfileLabel = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .perfil-input {
+    margin-bottom: 15px;
+  }
+
+  label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+  }
+
+  input:disabled {
+    background-color: #e0e0e0;
+    cursor: not-allowed;
+}
+`

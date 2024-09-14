@@ -48,3 +48,20 @@ export type FormularioCarroProps = {
     ano: number;
     quilometragem: number;
 }
+
+export interface PerfilProps {
+    nome: string;
+    email: string;
+    fotoUrl: string;
+    onNomeChange: (nome: string) => void;
+    onEmailChange: (email: string) => void;
+  }
+  
+  export interface ButtonProps {
+    onClick: () => void;
+  }
+  
+  export interface InputProps {
+    value: string;
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  }

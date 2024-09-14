@@ -8,6 +8,7 @@ import Login from './pages/Login/index.tsx'
 import CadastroUsuario from './pages/CadastroUsuario/index.tsx'
 import CadastroCarro from './pages/CadastroCarro/index.tsx'
 import Equipe from './pages/Equipe/index.tsx'
+import { PerfilContainer } from './styles.ts'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: '/equipe',
         element: <Equipe />
+      },
+      {
+        path: '/Perfil',
+        element: <PerfilContainer/>
       }
     ]
   }
