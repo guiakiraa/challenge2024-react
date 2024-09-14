@@ -102,6 +102,11 @@ export const MainPags = styled.main`
     justify-content: center;
 `
 
+export const MainHome = styled.main`
+    display: flex;
+    flex-direction: column;
+`
+
 export const MainForm = styled.main`
     background-color: #074c7e;
     min-height: 100vh;
@@ -271,3 +276,134 @@ export const SecForm = styled.section`
         }
     }
 `
+
+// HOME
+
+export const DivOpcoes1 = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    .container{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10vh;
+    }
+
+    h2{
+        color: #2086DA; 
+        font-size: 45px;
+        margin: 10vh;
+    }
+
+    img{
+        background-color: #8DD1F1;
+        height: 200px;
+        width: 200px;
+        padding: 5px;
+        margin: 5px;
+        border-radius: 100px;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+
+`
+
+export const DivAreaSelecao = styled.div`
+    display: flex;
+    background-color: #00345A;
+    padding: 1em;
+    align-items: center;
+
+
+    button{
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        height: 20px;
+        width: 25%;
+        padding: 20px;
+        background-color: #0094FF;
+        border-radius: 15px;
+        margin-top: 10vh;
+        color: white;
+    }
+
+    
+    img{
+
+        height: 300px;
+        width: 300px;
+        padding: 5px;
+        margin: 5px;
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+    .lado1{
+        flex-direction: column;
+        display: flex;
+        color: white;
+        text-align: right;
+        align-items: center;
+        padding-left: 30%;
+        font-size: 35px;
+
+    }
+
+    strong{
+        color: #8DD1F1;
+    }
+`
+
+export const DivAreaSelecao2 = styled.div`
+    display: flex;
+    padding: 1em;
+    align-items: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+
+
+    button{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        height: 20px;
+        width: 25%;
+        padding: 20px;
+        background-color: #0094FF;
+        border-radius: 15px;
+        margin-top: 10vh;
+        color: white;
+    }
+
+    
+    img{
+        background-color: #8DD1F1;
+        height: 300px;
+        width: 300px;
+        padding: 30px;
+        margin: 5px;
+        border-radius: 150px;
+        margin-left: 80px;
+        margin-right: 80px;
+
+    }
+    .lado2{
+        flex-direction: column;
+        display: flex;
+        color: #00345A;
+        text-align: left;
+        align-items: center;
+        padding-right: 30%;
+        font-size: 35px;
+
+    }
+
+    strong{
+        color: #8DD1F1;
+    }
+`
+

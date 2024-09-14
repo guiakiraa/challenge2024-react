@@ -48,3 +48,19 @@ export type FormularioCarroProps = {
     ano: number;
     quilometragem: number;
 }
+
+// TYPES HOME
+
+export type OpcoesPrincipalProps = {
+    logo1: string;
+    logo2: string;
+    logo3: string;
+}
+
+export type AreaSelecaoProps = {
+    inicioConteudo: string;
+    conteudoMarcado: string;
+    finalConteudo: string;
+    imagem: string;
+    textoBotao: string;
+}
