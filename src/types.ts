@@ -48,3 +48,12 @@ export type FormularioCarroProps = {
     ano: number;
     quilometragem: number;
 }
+
+export type RegistroProps = {
+    data: string;
+    preco: number;
+    carro: string;
+    ano: number;
+    placa: string;
+    diagnostico: string;
+}
