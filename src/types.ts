@@ -64,3 +64,26 @@ export type AreaSelecaoProps = {
     imagem: string;
     textoBotao: string;
 }
+
+export type RevisaoVideoProps = {
+    imagem:string;
+    imagemCont1:string;
+    imagemCont2:string;
+    imagemCont3:string;
+    conteudo:string;
+}
+
+export type formRevisao = {
+    orientacao: string;
+    pergunta: string;
+    tipoProblema: string;
+    onSim: () => void;       // Função chamada ao clicar no botão "Sim"
+    onNao: () => void;       // Função chamada ao clicar no botão "Não"
+    dialogRef: React.RefObject<HTMLDialogElement>;
+}
+
+export type RespostaProps = {
+    dialogRef: React.RefObject<HTMLDialogElement>;
+    problemaProps: string[];
+    onClose: () => void;
+}
