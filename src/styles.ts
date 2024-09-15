@@ -103,11 +103,6 @@ export const MainPags = styled.main`
     justify-content: center;
 `
 
-export const MainHome = styled.main`
-    display: flex;
-    flex-direction: column;
-`
-
 export const MainForm = styled.main`
     background-color: #074c7e;
     min-height: 100vh;
@@ -309,7 +304,28 @@ export const DivOpcoes1 = styled.div`
         margin-left: 80px;
         margin-right: 80px;
     }
-
+    @media screen and (max-width: 1080px) {
+        h2{
+            font-size: 40px;
+        }
+        img{
+            height: 150px;
+            width: 150px;
+            margin-left: 30px;
+            margin-right: 30px;
+        }
+    }
+    @media screen and (max-width: 850px) {
+        h2{
+            font-size: 35px;
+        }
+        img{
+            height: 100px;
+            width: 100px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
 
 `
 
@@ -322,10 +338,10 @@ export const DivAreaSelecao = styled.div`
 
     button{
         display: flex;
-        justify-content: center; /* Centraliza horizontalmente */
-        align-items: center; /* Centraliza verticalmente */
+        justify-content: center; 
+        align-items: center; 
         height: 20px;
-        width: 25%;
+        width: 20vw;
         padding: 20px;
         background-color: #0094FF;
         border-radius: 15px;
@@ -350,12 +366,48 @@ export const DivAreaSelecao = styled.div`
         text-align: right;
         align-items: center;
         padding-left: 30%;
-        font-size: 35px;
+        font-size: 30px;
 
     }
 
     strong{
         color: #8DD1F1;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .lado1{
+            padding-left: 10%;
+        }
+        h3 {
+            font-size: 25px;
+        }
+
+        img{
+            height: 250px;
+            width: 250px;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .lado1{
+            padding-left: 8%;
+        }
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        img{
+            height: 200px;
+            width: 200px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
     }
 `
 
@@ -372,7 +424,7 @@ export const DivAreaSelecao2 = styled.div`
         justify-content: center;
         align-items: center; 
         height: 20px;
-        width: 25%;
+        width: 20vw;
         padding: 20px;
         background-color: #0094FF;
         border-radius: 15px;
@@ -399,12 +451,48 @@ export const DivAreaSelecao2 = styled.div`
         text-align: left;
         align-items: center;
         padding-right: 30%;
-        font-size: 35px;
+        font-size: 30px;
 
     }
 
     strong{
         color: #8DD1F1;
+    }
+
+    @media screen and (max-width: 1080px) {
+        .lado2{
+            padding-right: 10%;
+        }
+        h3 {
+            font-size: 25px;
+        }
+
+        img{
+            height: 250px;
+            width: 250px;
+            margin-left: 25px;
+            margin-right: 25px;
+        }
+    }
+
+    @media screen and (max-width: 850px) {
+        .lado2{
+            padding-right: 8%;
+        }
+        h3 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 10px;
+        }
+
+        img{
+            height: 200px;
+            width: 200px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
     }
 `
 
@@ -430,7 +518,7 @@ export const DivInicioRevisao = styled.div`
         display: flex;
         justify-content: center;
         align-items: center; 
-        width: 15%;
+        width: 250px;
         padding: 20px;
         background-color: #0094FF;
         border-radius: 10px;
@@ -445,6 +533,47 @@ export const DivInicioRevisao = styled.div`
     a{
         margin: 10px;
         color: #00345A;
+        font-size: 15px;
+    }
+
+    @media screen and (max-width: 1200px) {
+        h2 {        
+            padding-left: 23vw;
+            padding-right: 23vw;
+        }
+
+    }
+    @media screen and (max-width: 1080px) {
+        h2 {
+            font-size: 28px;
+        }
+
+        button{
+            width: 220px;
+            padding: 15px;
+            margin-top: 6vh;
+        }
+        a{
+            font-size: 10px;
+            margin: 7px;
+        }
+    }
+    @media screen and (max-width: 780px) {
+        h2 {
+            font-size: 28px;
+            padding-left: 15vw;
+            padding-right: 15vw;
+        }
+
+        button{
+            width: 200px;
+            padding: 15px;
+            margin-top: 6vh;
+        }
+        a{
+            font-size: 10px;
+            margin: 7px;
+        }
     }
 
 `
@@ -454,24 +583,24 @@ export const DivVideoRevisao = styled.div`
     display: flex;
     padding-top: 4vh;
     padding-bottom: 4vh;
-    padding-right: 10vw;
-    padding-left: 10vw;
+    padding-right: 8px;
+    padding-left: 8px;
+    justify-content: center;
     margin-top: 10vh;
     align-items: center;
     margin-bottom: 20vh;
     .container{
         text-align: center;
-        color: #00345A;
         p{
             font-size: 20px;
             margin-bottom: 5vh;
         }
     }
+    
     img{
-        width: 13vw;
-        height: 13vw;
-        min-height: 150px;
-        min-width: 150px;
+        width: 180px;
+        height: 180px;
+
     }
 
     .dicasVideo{
@@ -480,12 +609,12 @@ export const DivVideoRevisao = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-        padding-left: 5vw;
-        padding-right: 5vw;
+        padding-left: 70px;
+        padding-right: 70px;
         flex-wrap: wrap;
         img{
-            width: 11vw;
-            height: 11vw;
+            width: 180px;
+            height: 180px;
             margin: 10px;
             border-radius: 12px;
             
@@ -496,72 +625,132 @@ export const DivVideoRevisao = styled.div`
             }
     }
 
-`
+    @media screen and (max-width: 1080px) {
 
-export const DialogInicial = styled.dialog`
-.inicio::backdrop{ /*Quando está no show modal*/
-    background-color: rgba(7, 9, 32, 0.8);
-}
+        .container p{
+            font-size: 18px;
+            margin-bottom: 5vh;
+        }
 
-.inicio{
-    background-color: #00345A;
-    width: 50vw;
-    height: 60vh;
-    border: none;
-    padding: 50px;
-    border-radius: 10px;
-
-    h2{
-        color: white;
-        text-align: center;
-        font-size: 30px;
-    }
-
-    p{
-        color: #8DD1F1;
-        font-size: 25px;
-
-    }
-
-    .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .dicasIniciais{
-        display: flex;
-        align-items: center;
         img{
-            width: 20px;
-            height: 20px;
-            padding: 5px;
+        width: 140px;
+        height: 140px;
+        }
+        .dicasVideo{
+        width: 80vw;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding-left: 3vw;
+        padding-right: 5vw;
+        flex-wrap: wrap;
+
+        img{
+            width: 150px;
+            height: 150px;
+            margin: 8px;
+            border-radius: 12px;
+            
+        }
+    }
+    }
+
+    @media screen and (max-width: 780px) {
+
+        .container p{
+            font-size: 13px;
+            margin-bottom: 3vh;
+            padding: 1px;
+        }
+
+        img{
+        width: 120px;
+        height: 120px;
+        }
+        .dicasVideo{
+            width: 80vw;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+
+            img{
+                width: 100px;
+                height: 100px;
+                border-radius: 12px;
+                
+            }
         }
     }
 
-    .iniciar{
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        width: 50%;
-        padding: 20px;
-        background-color: #0094FF;
-        border-radius: 10px;
-        margin-top: 10vh;
-        color: white;
-    }
-}
 `
+
+// export const DialogInicial = styled.dialog`
+// .inicio::backdrop{ /*Quando está no show modal*/
+//     background-color: rgba(7, 9, 32, 0.8);
+// }
+
+// .inicio{
+//     background-color: #00345A;
+//     width: 50vw;
+//     height: 60vh;
+//     border: none;
+//     padding: 50px;
+//     border-radius: 10px;
+
+//     h2{
+//         color: white;
+//         text-align: center;
+//         font-size: 30px;
+//     }
+
+//     p{
+//         color: #8DD1F1;
+//         font-size: 25px;
+
+//     }
+
+//     .container{
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     .dicasIniciais{
+//         display: flex;
+//         align-items: center;
+//         img{
+//             width: 20px;
+//             height: 20px;
+//             padding: 5px;
+//         }
+//     }
+
+//     .iniciar{
+//         display: flex;
+//         justify-content: center;
+//         align-items: center; 
+//         width: 50%;
+//         padding: 20px;
+//         background-color: #0094FF;
+//         border-radius: 10px;
+//         margin-top: 10vh;
+//         color: white;
+//     }
+// }
+// `
 
 export const DialogPerguntas = styled.dialog`
     background-color: #00345A;
-    width: 50vw;
+    width: 60vw;
     height: 60vh;
     border: none;
     padding: 50px;
     border-radius: 10px;
-    top: 20vh;
-    left: 25vw;
+    margin-top: 20vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+
 
     h2{
         color: white;
@@ -594,15 +783,69 @@ export const DialogPerguntas = styled.dialog`
         display: flex;
         justify-content: center;
         align-items: center; 
-        width: 10vw;
-        padding: 20px;
+        width: 200px;
+        height: 70px;
+        padding: 7px;
         background-color: #0094FF;
         border-radius: 10px;
-        margin-top: 10vh;
+        margin-top: 100px;
         color: white;
+        font-size: 15px;
     }
-    ::backdrop {
-    background-color: rgba(7, 9, 32, 0.8); /* Cor do backdrop com opacidade */
+    @media screen and (max-width: 1080px) {
+
+    padding: 40px;
+
+    h2{
+        color: white;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    p{
+        margin-top: 3vh;
+        color: #8DD1F1;
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .btn{
+        width: 150px;
+        height: 68px;
+        padding: 6px;
+        margin-top: 90px;
+        font-size: 12px;
+
+    }
+
+    
+}
+
+@media screen and (max-width: 780px) {
+
+    padding: 30px;
+
+    h2{
+        color: white;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    p{
+        margin-top: 3vh;
+        color: #8DD1F1;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .btn{
+        width: 120px;
+        height: 53px;
+        padding: 5px;
+        margin-top: 80px;
+        font-size: 10px;
+
+    }
 }
 `
 
@@ -610,17 +853,16 @@ export const DialogResp = styled.dialog`
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-color: #00345A;
-    width: 50vw;
+    width: 60vw;
     height: 60vh;
     border: none;
-    padding: 50px;
+    padding: 40px;
     border-radius: 10px;
-    top: 20vh;
-    left: 25vw;
-
+    margin-top: 20vh;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    align-items: center;
     h2{
         color: white;
         text-align: center;
@@ -637,11 +879,13 @@ export const DialogResp = styled.dialog`
     .btn{
         display: flex;
         justify-content: center;
-        width: 10vw;
+        align-items: center;
+        width: 170px;
+        height: 70px;
         padding: 20px;
         background-color: #0094FF;
         border-radius: 10px;
-        margin-top: 10vh;
+        margin-top: 50px;
         color: white;
         gap: 1;
 
@@ -655,8 +899,61 @@ export const DialogResp = styled.dialog`
     ul{
         color: white;
         font-size: 20px;
-        margin-top: 10%;
+        margin-top: 60px;
+        margin-left: 10%;
     }
 
+    @media screen and (max-width: 1080px) {
+        padding: 40px;
+        h2{
+        font-size: 15px;
+        }
 
+        p{
+            margin-top: 4vh;
+            font-size: 25px;
+        }
+
+        .btn{
+            width: 150px;
+            height: 60px;
+            padding: 6px;
+            margin-top: 45px;
+            font-size: 12px;
+            align-items: center;
+
+        }
+
+        ul{
+            font-size: 18px;
+            margin-top: 55px;
+        }
+}
+    @media screen and (max-width: 780px) {
+
+        h2{
+        font-size: 12px;
+        }
+
+        p{
+            margin-top: 3vh;
+            font-size: 22px;
+        }
+
+        .btn{
+            width: 120px;
+            height: 50px;
+            padding: 5px;
+            margin-top: 40px;
+            font-size: 10px;
+            align-items: center;
+
+        }
+
+        ul{
+            color: white;
+            font-size: 16px;
+            margin-top: 50px;
+        }
+}
 `
