@@ -685,61 +685,6 @@ export const DivVideoRevisao = styled.div`
 
 `
 
-// export const DialogInicial = styled.dialog`
-// .inicio::backdrop{ /*Quando está no show modal*/
-//     background-color: rgba(7, 9, 32, 0.8);
-// }
-
-// .inicio{
-//     background-color: #00345A;
-//     width: 50vw;
-//     height: 60vh;
-//     border: none;
-//     padding: 50px;
-//     border-radius: 10px;
-
-//     h2{
-//         color: white;
-//         text-align: center;
-//         font-size: 30px;
-//     }
-
-//     p{
-//         color: #8DD1F1;
-//         font-size: 25px;
-
-//     }
-
-//     .container{
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//     }
-
-//     .dicasIniciais{
-//         display: flex;
-//         align-items: center;
-//         img{
-//             width: 20px;
-//             height: 20px;
-//             padding: 5px;
-//         }
-//     }
-
-//     .iniciar{
-//         display: flex;
-//         justify-content: center;
-//         align-items: center; 
-//         width: 50%;
-//         padding: 20px;
-//         background-color: #0094FF;
-//         border-radius: 10px;
-//         margin-top: 10vh;
-//         color: white;
-//     }
-// }
-// `
-
 export const DialogPerguntas = styled.dialog`
     background-color: #00345A;
     width: 60vw;
@@ -750,12 +695,24 @@ export const DialogPerguntas = styled.dialog`
     margin-top: 20vh;
     margin-left: 20vw;
     margin-right: 20vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
 
 
     h2{
         color: white;
         text-align: center;
         font-size: 20px;
+    }
+    .btnSair{
+        color: #8DD1F1;
+        background-color: #00345A;
+        border: none;
+        font-size: 15px;
+        margin-top: 5vh;
+    }
+    .btnSair:hover{
+        color: white;
+        cursor: pointer;
     }
 
     .container{
@@ -788,9 +745,14 @@ export const DialogPerguntas = styled.dialog`
         padding: 7px;
         background-color: #0094FF;
         border-radius: 10px;
-        margin-top: 100px;
+        margin-top: 70px;
         color: white;
         font-size: 15px;
+    }
+
+    .btn:hover{
+        background-color: #0064FF;
+        cursor: pointer;
     }
     @media screen and (max-width: 1080px) {
 
@@ -813,7 +775,7 @@ export const DialogPerguntas = styled.dialog`
         width: 150px;
         height: 68px;
         padding: 6px;
-        margin-top: 90px;
+        margin-top: 65px;
         font-size: 12px;
 
     }
@@ -842,7 +804,7 @@ export const DialogPerguntas = styled.dialog`
         width: 120px;
         height: 53px;
         padding: 5px;
-        margin-top: 80px;
+        margin-top: 60px;
         font-size: 10px;
 
     }
@@ -863,6 +825,12 @@ export const DialogResp = styled.dialog`
     margin-left: 20vw;
     margin-right: 20vw;
     align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    .btn:hover{
+        background-color: #0064FF;
+        cursor: pointer;
+    }
+
     h2{
         color: white;
         text-align: center;
@@ -890,6 +858,7 @@ export const DialogResp = styled.dialog`
         gap: 1;
 
     }
+
 
     .divBotao{
         display: flex;
@@ -956,4 +925,117 @@ export const DialogResp = styled.dialog`
             margin-top: 50px;
         }
 }
+`
+
+export const DialogConfirmacao = styled.dialog`
+
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: #00345A 2px solid;
+    border-radius: 10px;
+    margin-top: 42vh;
+    width: 500px;
+    height: 180px;
+    margin-left: 30vw;
+
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    .p1{
+        text-align: left;
+        color: white;
+        background-color: #00345A;
+        font-size: 20px;
+        padding: 17px;
+    }
+    p{
+        padding: 20px;
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .btn{
+            width: 60px;
+            height: 25px;
+            font-size: 8px;
+            margin: 5px;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+
+    .btn:hover{
+        cursor: pointer;
+    }
+
+    #bSim{
+            background-color: #8DD1F1;;
+        }
+    
+    #bNao{
+            background-color: #b5b5b5;
+        }
+
+    .resp{
+        display: flex;
+        border-top: #00345A solid 1px;
+        justify-content: right;
+        padding: 10px;
+    }
+
+    @media screen and (max-width: 1080px) {
+        width: 450px;
+        height: 160px;
+        margin-left: 25vw;
+    .p1{
+        font-size: 16px;
+        padding: 15px;
+    }
+    p{
+        padding: 16px;
+        font-size: 13px;
+    }
+
+    .btn{
+            width: 50px;
+            height: 20px;
+            font-size: 7px;
+            margin: 4px;
+    
+
+        }
+
+        .resp{
+        padding: 8px;
+    }
+
+    }
+
+    @media screen and (max-width: 780px) {
+        width: 380px;
+        height: 120px;
+        margin-left: 15vw;
+    .p1{
+        font-size: 12px;
+        padding: 13px;
+    }
+    p{
+        padding: 14px;
+        font-size: 11px;
+    }
+
+    .btn{
+            width: 40px;
+            height: 15px;
+            font-size: 6px;
+            margin: 3px;
+    
+
+        }
+
+        .resp{
+        padding: 6px;
+    }
+        
+    }
+
 `

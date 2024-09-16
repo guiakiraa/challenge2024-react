@@ -2,18 +2,21 @@ import { useEffect, useRef, useState } from "react";
 import { DivInicioRevisao } from "../../styles";
 import PaginaPergunta from "./PaginaPergunta";
 import Resposta from "./Resposta";
+import Confirmacao from "./Confirmacao";
 
 export default function InicioRevisao() {
-    const [indicePergunta, setIndicePergunta] = useState(0); // Controle do índice da pergunta atual
+    const [indicePergunta, setIndicePergunta] = useState(0); 
     const [mostrarPergunta, setMostrarPergunta] = useState(false);
     const [mostrarResultado, setMostrarResultado] = useState(false);
-    const [problemas, setProblemas] = useState<string[]>([]); // Armazena os problemas identificados
+    const [mostrarConfirmacao, setMostrarConfirmacao] = useState(false);
+    const [problemas, setProblemas] = useState<string[]>([]); 
     const dialogRef = useRef<HTMLDialogElement>(null); // Referência para o diálogo
 
     // Array com as perguntas
     const perguntas = [
         { orientacao: "1. Segure o acelerador do veículo.", pergunta: "Ele apresentou algum ruído?", tipoProblema: "Ruído ao acelerar" },
-        { orientacao: "2. Ligue as palhetas do limpador de para-brisa.", pergunta: "Apresentou algum trepidação ou ruído estranho?", tipoProblema: "Ruído nas palhetas" }
+        { orientacao: "2. Ligue as palhetas do limpador de para-brisa.", pergunta: "Apresentou algum trepidação ou ruído estranho?", tipoProblema: "Ruído nas palhetas" },
+        { orientacao: "3. Vá para um lugar amplo.", pergunta: "Dirija devagar com o automóvel. Ao soltar o volante, o carro desvia para a direita ou esquerda?", tipoProblema: "Alinhamento do automóvel" }
     ];
 
     useEffect(() => {
@@ -27,6 +30,12 @@ export default function InicioRevisao() {
             dialogRef.current.showModal(); 
         }
     }, [mostrarResultado]);
+
+    useEffect(() => {
+        if (mostrarConfirmacao && dialogRef.current) {
+            dialogRef.current.showModal(); 
+        }
+    }, [mostrarConfirmacao]);
 
     const iniciarRevisao = () => {
         setMostrarPergunta(true); 
@@ -49,6 +58,11 @@ export default function InicioRevisao() {
         }
     };
 
+    const btnSair = () => {
+        setMostrarPergunta(false)
+        setMostrarConfirmacao(true)
+    };
+
     const finalizarRevisao = () => {
         setMostrarPergunta(false);
         setMostrarResultado(true); 
@@ -58,6 +72,16 @@ export default function InicioRevisao() {
         setProblemas([]);
         setIndicePergunta(0);
         setMostrarResultado(false); 
+    };
+
+    const confirmarSair = (confirmou: boolean) => {
+        setMostrarConfirmacao(false); // Fecha o modal de confirmação
+        if (confirmou) {
+            setMostrarPergunta(false);
+            fecharResultado();
+        } else {
+            setMostrarPergunta(true);
+        }
     };
 
     return (
@@ -74,14 +98,22 @@ export default function InicioRevisao() {
                     pergunta={perguntas[indicePergunta].pergunta}
                     onSim={btnSim}  
                     onNao={btnNao}
+                    btnSair={btnSair}
                 />
             )}
             {mostrarResultado && (
                 <Resposta 
                     dialogRef={dialogRef} 
                     problemaProps={problemas}
-                    onClose={fecharResultado} // Passa a função de fechar para o Resposta
+                    onClose={fecharResultado}
                 />
+            )}
+            {mostrarConfirmacao && (
+                <Confirmacao 
+                dialogRef={dialogRef}
+                onConfirm={confirmarSair}
+                />
+                
             )}
         </>
     );

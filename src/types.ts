@@ -76,8 +76,9 @@ export type RevisaoVideoProps = {
 export type formRevisao = {
     orientacao: string;
     pergunta: string;
-    onSim: () => void;       //
+    onSim: () => void;       
     onNao: () => void;       
+    btnSair: () => void;       
     dialogRef: React.RefObject<HTMLDialogElement>;
 }
 
@@ -85,4 +86,13 @@ export type RespostaProps = {
     dialogRef: React.RefObject<HTMLDialogElement>;
     problemaProps: string[];
     onClose: () => void;
+}
+
+export type ExplicacaoProps={
+    imagem:string;
+}
+
+export type ConfirmacaoProps ={
+    dialogRef: React.RefObject<HTMLDialogElement>;
+    onConfirm: (confirmou: boolean) => void;
 }
