@@ -27,7 +27,7 @@ export default function FormularioCadastroUsuario() {
                 return;
             }
 
-            navigate('/')
+            navigate('/cadastro/endereco')
         },
         [formState]
     );

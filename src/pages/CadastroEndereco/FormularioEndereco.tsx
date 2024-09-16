@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Endereco } from "../../types";
 import { SecFormCadastro } from "../../styles";
+import { useNavigate } from "react-router-dom";
 
 
 export default function FormularioEndereco() {
@@ -8,6 +9,12 @@ export default function FormularioEndereco() {
     const [cep, setCep] = useState('');
     const [address, setAddress] = useState<Endereco | null>(null);
     const [error, setError] = useState('');
+    
+    const navigate = useNavigate();
+
+    const finalizar = () =>{
+        navigate('/cadastro/carro')
+    }
 
     // Função para buscar o endereço a partir do CEP
     const fetchAddress = async (cep: string) => {
@@ -100,7 +107,7 @@ export default function FormularioEndereco() {
                             readOnly
                         />
                     </div>
-                    <button type="submit">
+                    <button type="submit" onClick={finalizar}>
                         Enviar
                     </button>
                     <div className="status">

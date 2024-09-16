@@ -72,6 +72,7 @@ export type AreaSelecaoProps = {
     finalConteudo: string;
     imagem: string;
     textoBotao: string;
+    irPara: string;
 }
 
 export type RevisaoVideoProps = {
