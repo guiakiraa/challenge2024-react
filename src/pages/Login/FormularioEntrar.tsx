@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react"
-import { useNavigate } from "react-router-dom";
-import { SecForm } from "../../styles";
+import { Link, useNavigate } from "react-router-dom";
+import { SecFormLogin } from "../../styles";
 import { FormularioProps } from "../../types";
 export default function Formulario() {
 
@@ -46,7 +46,7 @@ export default function Formulario() {
     )
 
     return (
-        <SecForm>
+        <SecFormLogin>
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <div className="campo-texto">
@@ -71,6 +71,10 @@ export default function Formulario() {
                         onChange={handleChangeInput}
                     /> 
                 </div>
+                <div className="cadastrar">
+                    <p>Não tem uma conta?</p>
+                    <Link to='/cadastro'>Crie uma!</Link>
+                </div>
                 <div className="campo-check">
                     <input
                         type="checkbox" 
@@ -85,6 +89,6 @@ export default function Formulario() {
                     Enviar
                 </button>
             </form>
-        </SecForm>
+        </SecFormLogin>
     )
 }

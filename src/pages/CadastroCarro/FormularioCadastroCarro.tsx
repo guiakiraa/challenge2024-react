@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { SecForm } from "../../styles";
+import { SecFormCadastro } from "../../styles";
 import { FormularioCarroProps } from "../../types";
 import { useCallback, useState } from "react";
 
@@ -50,7 +50,7 @@ export default function FormularioCadastroCarro() {
     )
 
     return (
-        <SecForm>
+        <SecFormCadastro>
             <h2>Cadastro Carro</h2>
             <form onSubmit={handleSubmit}>
                 <div className="campo-texto">
@@ -111,7 +111,16 @@ export default function FormularioCadastroCarro() {
                 <button type="submit">
                     Enviar
                 </button>
+                <div className="status">
+                    <i id="agora" className="fa-solid fa-circle"></i>
+                    <i className="fa-solid fa-minus"></i>
+                    <i className="fa-solid fa-minus"></i>   
+                    <i id="agora" className="fa-solid fa-circle"></i>
+                    <i className="fa-solid fa-minus"></i>
+                    <i className="fa-solid fa-minus"></i>   
+                    <i id="agora" className="fa-solid fa-circle"></i>
+                </div>
             </form>
-        </SecForm>
+        </SecFormCadastro>
     )
 }
