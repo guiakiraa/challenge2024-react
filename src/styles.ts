@@ -1561,3 +1561,24 @@ export const PerfilStyle = styled.div`
         padding: 5px;
     }
 `
+
+export const DivAjuda = styled.div`
+    display: flex;
+    margin-top: 10vh;
+    background-color: #8DD1F1;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+    text-align: center;
+    color: white;
+    }
+
+    h2{
+    color: #00345A
+    }
+
+    hr{
+    color: #00345A
+    }
+`
