@@ -12,6 +12,8 @@ import Revisao from './pages/revisao/index.tsx'
 import Erro from './pages/Erro/index.tsx'
 import Historico from './pages/Historico/index.tsx'
 import Perfil from './pages/Perfil/index.tsx'
+import CadastroEndereco from './pages/CadastroEndereco/index.tsx'
+import Diagnostico from './pages/Diagnostico/index.tsx'
 
 const router = createBrowserRouter([
   {
@@ -28,8 +30,12 @@ const router = createBrowserRouter([
         element: <Login />
       },
       {
-        path: '/cadastro',
-        element: <CadastroUsuario />
+        path: '/diagnostico',
+        element: <Diagnostico />
+      },
+      {
+        path: '/cadastro/endereco',
+        element: <CadastroEndereco />
       },
       {
         path: '/cadastro',

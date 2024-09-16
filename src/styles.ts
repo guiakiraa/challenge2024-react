@@ -71,7 +71,7 @@ export const NavMenu = styled.nav`
         }
 
         a {
-            padding: 20px 40px;
+            padding: 15px 20px;
             background-color: #00345A;
             text-decoration: none;
             font-size: 22px;
@@ -84,13 +84,17 @@ export const NavMenu = styled.nav`
 
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 790px) {
         ul {
-
             a {
-                padding: 20px;
+                padding: 7px;
                 font-size: 16px;
             }
+        }
+
+        img{
+            margin-left: 10px;
+            width: 70px;
         }
     }
 `
@@ -1448,6 +1452,7 @@ export const ErroStyle = styled.div`
             width: 20em;
             height: 10%;
             padding: 5px;
+            border: none;
             font-size: 15px;
             margin: 5px;
             border-radius: 5px;
@@ -1490,5 +1495,69 @@ export const ErroStyle = styled.div`
         button{
             width: 10em;
         }
+    }
+`
+
+export const DivWatson = styled.div`
+    background-color: blue;
+`
+
+export const MainDiagnostico = styled.main`
+    background-color: white;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    align-items: center;
+
+    h1{
+        margin-top: 10vh;
+        font-size: 50px;
+        color: #00345A;
+    }
+    p{
+        margin: 3vh;
+        color: #0094FF;
+        font-size: 25px;
+    }
+    
+`
+
+export const PerfilStyle = styled.div`
+    display: flex;
+    margin-top: 10vh;
+    background-color: #8DD1F1;
+    align-items: center;
+    justify-content: center;
+    .user{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px;
+    }
+    img{
+        height: 30vh;
+    }
+    p{
+        margin: 10px;
+        text-decoration: underline;
+        font-size: 14px;
+    }
+    p:hover{
+        cursor: pointer;
+        color: grey;
+    }
+
+    input{
+        background-color: #D9D9D9;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    h3{
+        font-size: 20px;
+        background-color: #dfdfdf;
+        padding: 5px;
     }
 `

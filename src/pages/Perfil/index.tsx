@@ -1,6 +1,7 @@
 import Cabecalho from "../../components/Cabecalho";
 import Rodape from "../../components/Rodape";
 import { DivFundoAzulClaro, MainPags } from "../../styles";
+import AbaPerfil from "./Abaperfil";
 
 export default function Perfil() {
 
@@ -8,9 +9,9 @@ export default function Perfil() {
         <>  
             <Cabecalho titulo="Perfil" />
             <MainPags>
-                <DivFundoAzulClaro>
+                <AbaPerfil>
                     
-                </DivFundoAzulClaro>
+                </AbaPerfil>
             </MainPags>
             <Rodape />
         </>
