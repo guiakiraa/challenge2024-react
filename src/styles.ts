@@ -1562,23 +1562,24 @@ export const PerfilStyle = styled.div`
     }
 `
 
-export const DivAjuda = styled.div`
+export const SecAjuda = styled.section`
+    min-height: 70vh;
     display: flex;
-    margin-top: 10vh;
+    flex-direction: column;
+    margin-top: 4%;
     background-color: #8DD1F1;
     align-items: center;
     justify-content: center;
+    gap: 40px;
 
     h1{
-    text-align: center;
-    color: white;
+        font-size: 40px;
+        text-align: center;
+        color: white;
     }
 
     h2{
-    color: #00345A
+        color: #00345A
     }
 
-    hr{
-    color: #00345A
-    }
 `

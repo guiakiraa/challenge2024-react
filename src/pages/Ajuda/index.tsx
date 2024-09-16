@@ -1,6 +1,6 @@
 import Cabecalho from "../../components/Cabecalho";
 import Rodape from "../../components/Rodape";
-import { DivFundoAzulClaro, MainPags } from "../../styles";
+import { MainPags } from "../../styles";
 import Duvidas from "./Duvidas";
 
 
