@@ -7,10 +7,8 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: "League Spartan", sans-serif;
+        font-family: "League Spartan", sans-serif;;
     }
-
-    
 
     #root {
         width: 100%;
@@ -18,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
         display: flex;
         flex-direction: column;
     }
+    
 `
 
 export default GlobalStyle

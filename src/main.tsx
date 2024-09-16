@@ -10,6 +10,8 @@ import CadastroCarro from './pages/CadastroCarro/index.tsx'
 import Equipe from './pages/Equipe/index.tsx'
 import Revisao from './pages/revisao/index.tsx'
 import Erro from './pages/Erro/index.tsx'
+import Historico from './pages/Historico/index.tsx'
+import Perfil from './pages/Perfil/index.tsx'
 
 const router = createBrowserRouter([
   {
@@ -30,6 +32,10 @@ const router = createBrowserRouter([
         element: <CadastroUsuario />
       },
       {
+        path: '/cadastro',
+        element: <CadastroUsuario />
+      },
+      {
         path: '/cadastro/carro',
         element: <CadastroCarro />
       },
@@ -41,6 +47,14 @@ const router = createBrowserRouter([
         path: '/revisao',
         element: <Revisao />
       },
+      {
+        path: '/historico',
+        element: <Historico />
+      },
+      {
+        path:'/perfil',
+        element: <Perfil />
+      }
     ]
   }
 ])

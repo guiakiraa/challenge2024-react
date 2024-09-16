@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { DivBannerProps } from "./types";
 
-
 export const HeaderCabecalho = styled.header`
     display: flex;
     flex-direction: column;
@@ -24,6 +23,7 @@ export const DivBanner = styled.div<DivBannerProps>`
     h1 {
         font-size: 50px;
         color: #fff;
+        text-transform:uppercase;
     }
 
     p {
@@ -97,23 +97,22 @@ export const NavMenu = styled.nav`
 
 export const MainPags = styled.main`
     background-color: white;
-    min-height: 100vh;
+    flex-grow: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 `
 
 export const MainForm = styled.main`
-    background-color: #074c7e;
-    min-height: 100vh;
+    flex-grow: 1;
+    background-color: #00345A;
     display: flex;
     flex-direction: column;
     justify-content: center;
 `
 
 export const DivTituloEquipe = styled.div`
+    margin-top: 50px;
     margin-left: 100px;
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 30px;
@@ -126,14 +125,31 @@ export const DivTituloEquipe = styled.div`
         color: #00345a;
         font-size: 35px;
     }
+
+    @media screen and (max-width: 970px) {
+        i {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+    }
 `
 
-export const DivMembros = styled.div`
+export const DivFundoAzulClaro = styled.div`
     background-color: #8DD1F1;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 40px 0;
+    margin: 50px 0;
+
+    @media screen and (max-width: 970px) {
+        flex-direction: column;
+
+        gap: 30px;
+    }
 `
 
 export const DivCardMembro = styled.div`
@@ -193,13 +209,73 @@ export const DivCardMembro = styled.div`
         }
     }
 
+    @media screen and (max-width: 1200px) {
+        height: 425px;
+        width: 300px;
+
+        img {
+            width: 210px;
+        }
+
+        h3 {
+            font-size: 22px;
+        }
+
+        .container {
+            width: 250px;
+
+            i {
+                font-size: 21px;
+            }
+        }
+
+        a {
+            font-size: 16px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+    @media screen and (max-width: 970px) {
+        height: 350px;
+        width: 265px;
+
+        img {
+            width: 160px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        .container {
+            width: 200px;
+
+            i {
+                font-size: 18px;
+            }
+        }
+
+        a {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+
 `
 
-export const SecForm = styled.section`
+export const SecFormLogin = styled.section`
     background-color: #074C7E;
     display: flex;
     flex-direction: column;
+    width: 400px;
     align-items: center;
+    align-self: center;
     gap: 50px;
     border-radius: 15px;
     padding: 50px 0;
@@ -208,12 +284,13 @@ export const SecForm = styled.section`
         text-transform: uppercase;
         color: #fff;
         font-size: 40px;
+        text-align: center;
     }
 
     form {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 30px;
         background-color: #074C7E;
 
@@ -227,6 +304,21 @@ export const SecForm = styled.section`
             display: flex;
             flex-direction: column;
             gap: 5px;
+        }
+
+        .cadastrar {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            p {
+                color: white;
+            }
+
+            a {
+                color: #8DD1F1;
+                text-decoration: none;
+            }
         }
 
         .campo-check {
@@ -251,8 +343,8 @@ export const SecForm = styled.section`
         }
 
         #lembrarLogin {
-            width: 20px;
-            height: 20px;
+            width: 17px;
+            height: 17px;
         }
 
         button {
@@ -271,6 +363,268 @@ export const SecForm = styled.section`
             background-color: #2211cc;
         }
     }
+`
+
+export const SecFormCadastro = styled.section`
+    background-color: #074C7E;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: center;
+    align-self: center;
+    gap: 50px;
+    border-radius: 15px;
+    padding: 50px 0;
+
+    h2 {
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 40px;
+        text-align: center;
+        width: 50%;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+        background-color: #074C7E;
+
+        .linha-form {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .campo-texto {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .cadastrar {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            p {
+                color: white;
+            }
+
+            a {
+                color: #8DD1F1;
+                text-decoration: none;
+            }
+        }      
+
+        label {
+            color: white;
+            display: block;
+            font-size: 18px;
+        }
+
+        input {
+            background-color: white;
+            border: none;
+            font-size: 16px;
+        }
+
+        .status {
+            align-self: center;
+            display: flex;
+            align-items: center;
+
+            i {
+                font-size: 30px;
+            }
+
+            .fa-minus {
+                color: white;
+            }
+
+            #agora {
+                color: #0094FF;
+            }
+
+            #falta {
+                color: white;
+            }
+        }
+
+        button {
+            margin: auto;
+            text-align: center;
+            background-color: #0066FF;
+            font-weight: 700;
+            font-size: 18px;
+            padding: 10px 30px;
+            border: none;
+            cursor: pointer;
+            color: white;
+        }
+
+        button:hover {
+            background-color: #2211cc;
+        }
+    }
+`
+
+export const DivRegistro = styled.div`
+    width: 800px;
+
+    header {
+        padding: 20px;
+        border-radius: 20px 20px 0 0;
+        background-color: #B4B4B4;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7px;
+        }
+
+        h3 {
+            font-size: 20px;
+            color: #585757;
+            font-weight: 670;
+            text-decoration: underline;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 16px;
+            color: #585757;
+            font-weight: 500;
+        }
+    }
+
+    main {
+        min-height: 250px;
+        padding: 20px;
+        border-radius: 0 0 20px 20px;
+        background-color: #D9D9D9;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .infos {
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+
+            div {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+
+        h4 {
+            color: #585757;
+            font-weight: 670;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        p {
+            color: #7E7D7D;
+            font-weight: 500;
+            font-size: 18px;
+        }
+    }
+`
+
+export const SecHistorico = styled.section`
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+
+    h2 {
+        color: #333333;
+        text-transform: uppercase;
+        font-size: 30px;
+    }
+`
+
+export const FooterRodape = styled.footer`
+    padding: 20px;
+    background-color: #00345A;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10vh;
+
+    .parcerias {
+        img {
+            width: 200px;
+        }
+    }
+
+    p {
+        color: white;
+        font-size: 22px;
+        text-decoration: underline;
+    }
+
+    .ajuda {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            width: 30px;
+        }
+
+        p {
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+    }
+
+    @media screen and (max-width: 900px) {
+    .parcerias {
+        img {
+            width: 140px;
+        }
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .ajuda {
+
+        img {
+            width: 20px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+    }
+    }
+`
+
+export const DivSobreNos = styled.div`
+    background-color: #8DD1F1;
+    border-radius: 18px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 // HOME

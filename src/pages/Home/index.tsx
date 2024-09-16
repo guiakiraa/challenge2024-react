@@ -1,5 +1,6 @@
 import Cabecalho from "../../components/Cabecalho";
-import { MainPags } from "../../styles";
+import Rodape from "../../components/Rodape";
+import { FooterRodape, MainPags } from "../../styles";
 import AreaSelecao1 from "./AreaSelecao1";
 import AreaSelecao2 from "./AreaSelecao2";
 import OpcoesHome1 from "./OpcoesHome1";
@@ -15,6 +16,8 @@ export default function Home() {
             <AreaSelecao1 imagem="../../public/prancheta.png" inicioConteudo="Faça o " conteudoMarcado="diagnóstico " finalConteudo="do seu veículo com a ajuda do nosso Bot"  textoBotao="FAZER DIAGNÓSTICO"/>      
             <AreaSelecao2 imagem="../../public/ferramenta.png" inicioConteudo="Faça uma " conteudoMarcado="revisão " finalConteudo="no seu carro para achar possíveis problemas"  textoBotao="REVISAR AUTOMOVEL"/>
             <AreaSelecao1 imagem="../../public/caderno.png" inicioConteudo="Veja os laudos dos " conteudoMarcado="diagnósticos e revisões " finalConteudo="feitos anterioemente"  textoBotao="VER HISTÓRICO"/>      
+            <Rodape></Rodape>
+            
             </MainPags>
         </>
     )
