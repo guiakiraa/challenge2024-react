@@ -76,9 +76,8 @@ export type RevisaoVideoProps = {
 export type formRevisao = {
     orientacao: string;
     pergunta: string;
-    tipoProblema: string;
-    onSim: () => void;       // Função chamada ao clicar no botão "Sim"
-    onNao: () => void;       // Função chamada ao clicar no botão "Não"
+    onSim: () => void;       //
+    onNao: () => void;       
     dialogRef: React.RefObject<HTMLDialogElement>;
 }
 

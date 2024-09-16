@@ -18,46 +18,46 @@ export default function InicioRevisao() {
 
     useEffect(() => {
         if (mostrarPergunta && dialogRef.current) {
-            dialogRef.current.showModal(); // Exibe o diálogo quando necessário
+            dialogRef.current.showModal(); 
         }
-    }, [mostrarPergunta, indicePergunta]); // Atualiza sempre que `mostrarPergunta` ou `indicePergunta` mudar
+    }, [mostrarPergunta, indicePergunta]); 
 
     useEffect(() => {
         if (mostrarResultado && dialogRef.current) {
-            dialogRef.current.showModal(); // Exibe o diálogo de resultado quando necessário
+            dialogRef.current.showModal(); 
         }
     }, [mostrarResultado]);
 
     const iniciarRevisao = () => {
-        setMostrarPergunta(true); // Exibe a primeira pergunta
+        setMostrarPergunta(true); 
     };
 
     const btnSim = () => {
-        setProblemas([...problemas, perguntas[indicePergunta].tipoProblema]); // Armazena o problema identificado
+        setProblemas([...problemas, perguntas[indicePergunta].tipoProblema]); 
         if (indicePergunta < perguntas.length - 1) {
-            setIndicePergunta(indicePergunta + 1); // Passa para a próxima pergunta
+            setIndicePergunta(indicePergunta + 1); 
         } else {
-            finalizarRevisao(); // Finaliza a revisão
+            finalizarRevisao(); 
         }
     };
 
     const btnNao = () => {
         if (indicePergunta < perguntas.length - 1) {
-            setIndicePergunta(indicePergunta + 1); // Passa para a próxima pergunta
+            setIndicePergunta(indicePergunta + 1); 
         } else {
-            finalizarRevisao(); // Finaliza a revisão
+            finalizarRevisao(); 
         }
     };
 
     const finalizarRevisao = () => {
         setMostrarPergunta(false);
-        setMostrarResultado(true); // Mostra o resultado final
+        setMostrarResultado(true); 
     };
 
     const fecharResultado = () => {
         setProblemas([]);
         setIndicePergunta(0);
-        setMostrarResultado(false); // Esconde o resultado final
+        setMostrarResultado(false); 
     };
 
     return (
@@ -72,8 +72,8 @@ export default function InicioRevisao() {
                     dialogRef={dialogRef}
                     orientacao={perguntas[indicePergunta].orientacao}
                     pergunta={perguntas[indicePergunta].pergunta}
-                    onSim={btnSim}  // Passa para a próxima pergunta ao clicar "Sim"
-                    onNao={btnNao}  // Passa para a próxima pergunta ao clicar "Não"
+                    onSim={btnSim}  
+                    onNao={btnNao}
                 />
             )}
             {mostrarResultado && (

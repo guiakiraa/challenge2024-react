@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { DialogResp } from "../../styles";
 import { RespostaProps } from "../../types";
 
 export default function Resposta({ dialogRef, problemaProps, onClose }: RespostaProps) {
     useEffect(() => {
         if (dialogRef.current) {
-            dialogRef.current.showModal(); // Exibe o diálogo quando o componente é montado
+            dialogRef.current.showModal();
         }
     }, [dialogRef]);
 
@@ -18,7 +18,7 @@ export default function Resposta({ dialogRef, problemaProps, onClose }: Resposta
                     {problemaProps.map(prob => <li key={prob}>{prob}</li>)}
                 </ul>
                 <div className="divBotao">
-                    <button className="btn" onClick={onClose}>Fechar</button> {/* Adiciona botão para fechar */}
+                    <button className="btn" onClick={onClose}>Fechar</button> 
                 </div>
             </div>
         </DialogResp>

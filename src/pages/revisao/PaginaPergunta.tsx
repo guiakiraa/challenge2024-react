@@ -6,7 +6,7 @@ export default function PaginaPergunta({ orientacao, pergunta, onSim, onNao, dia
     
     useEffect(() => {
         if (dialogRef.current) {
-            dialogRef.current.showModal(); // Exibe o diálogo quando o componente é montado
+            dialogRef.current.showModal(); 
         }
     }, []);
 
@@ -17,7 +17,7 @@ export default function PaginaPergunta({ orientacao, pergunta, onSim, onNao, dia
                 <p>{pergunta}</p>
                 <div className="resp">
                     <button id="sim" onClick={onSim} className="btn">SIM</button>
-                    <button id="nao" onClick={onNao} className="btn">NÃO</button>
+                    <button id="nao" onClick={onNao} className="btn">NÃO</button> 
                 </div>
             </div>
         </DialogPerguntas>
