@@ -96,3 +96,6 @@ export type ConfirmacaoProps ={
     dialogRef: React.RefObject<HTMLDialogElement>;
     onConfirm: (confirmou: boolean) => void;
 }
+export type ErroProps ={
+    imagem: string;
+}

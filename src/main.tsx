@@ -9,11 +9,13 @@ import CadastroUsuario from './pages/CadastroUsuario/index.tsx'
 import CadastroCarro from './pages/CadastroCarro/index.tsx'
 import Equipe from './pages/Equipe/index.tsx'
 import Revisao from './pages/revisao/index.tsx'
+import Erro from './pages/Erro/index.tsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <Erro />,
     children: [
       {
         path: '/',
@@ -38,7 +40,7 @@ const router = createBrowserRouter([
       {
         path: '/revisao',
         element: <Revisao />
-      }
+      },
     ]
   }
 ])

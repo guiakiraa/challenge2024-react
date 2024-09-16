@@ -283,9 +283,17 @@ export const DivOpcoes1 = styled.div`
     margin-bottom: 40px;
 
     .container{
+        display: flex;
         width: 100%;
         text-align: center;
+        align-items: center;
+        justify-content: center;
         margin-bottom: 10vh;
+    }
+    .itemOpcao{
+        display: flex;
+        flex-direction: column;
+        color: #00345A;
     }
 
     h2{
@@ -303,6 +311,9 @@ export const DivOpcoes1 = styled.div`
         border-radius: 100px;
         margin-left: 80px;
         margin-right: 80px;
+    }
+    img:hover{
+        cursor: pointer;
     }
     @media screen and (max-width: 1080px) {
         h2{
@@ -347,6 +358,10 @@ export const DivAreaSelecao = styled.div`
         border-radius: 15px;
         margin-top: 10vh;
         color: white;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: #0064FF;
     }
 
     
@@ -430,6 +445,10 @@ export const DivAreaSelecao2 = styled.div`
         border-radius: 15px;
         margin-top: 10vh;
         color: white;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: #0064FF;
     }
 
     
@@ -1038,4 +1057,84 @@ export const DialogConfirmacao = styled.dialog`
         
     }
 
+`
+
+export const ErroStyle = styled.div`
+    height: 100vh;
+    display: flex;
+    background-color: #00345A;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        font-size: 15px;
+        color: rgb(141, 209, 241, 0.5);
+    }
+
+    .lado2{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+
+        p{
+            font-size: 50px;
+            color: white;
+        }
+        .desc{
+            color: #8DD1F1;
+            font-size: 40px;
+        }
+    }
+
+    img{
+        height: 45vh;
+    }
+
+    button{
+            width: 20em;
+            height: 10%;
+            padding: 5px;
+            font-size: 15px;
+            margin: 5px;
+            border-radius: 5px;
+            background-color: #0094FF;
+            color: white;
+            margin-top: 3vh;
+        }
+
+    button:hover{
+        cursor: pointer;
+        background-color: #0064FF;
+    }
+
+    @media screen and (max-width: 1080px) {
+        h1{
+            font-size: 12px;
+        }
+        p{
+            font-size: 30px;
+        }
+        .desc{
+            font-size: 20px;
+        }
+        
+        button{
+            width: 15em;
+        }
+    }
+    
+    @media screen and (max-width: 780px) {
+        h1{
+            font-size: 10px;
+        }
+        p{
+            font-size: 35px;
+        }
+        .desc{
+            font-size: 20px;
+        }
+        button{
+            width: 10em;
+        }
+    }
 `
