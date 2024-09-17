@@ -1582,4 +1582,12 @@ export const SecAjuda = styled.section`
         color: #00345A
     }
 
+    a {
+        padding: 15px 25px;
+        text-decoration: none;
+        color: #00345A;
+        font-weight: 600;
+        background-color: #0094FF;
+    }
+
 `
