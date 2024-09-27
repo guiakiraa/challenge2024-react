@@ -18,19 +18,23 @@ export default function OpcoesHome1({logo1, logo2, logo3}: OpcoesPrincipalProps)
 
     return(
         <DivOpcoes1>
-            <h2>O que vamos fazer hoje?</h2>
+            <h2>Trilhando um caminho mais <span>seguro</span></h2>
             <div className="container">    
                 <div id="diagnostico" className="itemOpcao">
-                    <img src={logo2} alt="diagnóstico automotivo" onClick={irParaDiagnostico}/>
-                    Diagnóstico
+                    <img src={logo2} alt="diagnóstico automotivo" onClick={irParaRevisao}/>
+                    <h3>REVISÃO</h3>
+                    <p>Revise seu veículo para identificar problemas</p>
                 </div>
-                <div id="revisao" className="itemOpcao" onClick={irParaRevisao}>
+                <div id="revisao" className="itemOpcao" onClick={irParaDiagnostico}>
                     <img src={logo1} alt="revisão assistida"/>
-                    Revisão
+                    <h3>DIAGNÓSTICO</h3>
+                    <p>Descubra o problema do seu veículo</p>
                 </div>
                 <div id="historico" className="itemOpcao" onClick={irParaHistorico}>
                     <img src={logo3} alt="historico" />
-                    Histórico
+                    <h3>HISTÓRICO</h3>
+                    <p>Veja suas revisões e diagnósticos anteriores</p>
+
                 </div>
             </div>
             

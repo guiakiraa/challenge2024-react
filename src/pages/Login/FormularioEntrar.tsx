@@ -58,6 +58,8 @@ export default function Formulario() {
                         required
                         value={formState.email}
                         onChange={handleChangeInput}
+
+                        className="bloco"
                     /> 
                 </div>
                 <div className="campo-texto">
@@ -68,7 +70,7 @@ export default function Formulario() {
                         name="senha"
                         required
                         value={formState.senha}
-                        onChange={handleChangeInput}
+                        onChange={handleChangeInput} className="bloco"
                     /> 
                 </div>
                 <div className="cadastrar">

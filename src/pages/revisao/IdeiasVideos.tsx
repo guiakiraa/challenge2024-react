@@ -1,19 +1,17 @@
 import { DivVideoRevisao } from "../../styles"
 import { RevisaoVideoProps } from "../../types"
+import CardVideo from "./CardVideo"
 
-export default function IdeiasVideos({imagem, conteudo, imagemCont1, imagemCont2, imagemCont3} : RevisaoVideoProps){
+export default function IdeiasVideos(){
     return(
         <DivVideoRevisao>
-            <img src={imagem} alt="" />
-            <a href={conteudo}></a>
-            <div className="container">
-                <p>CONTEUDOS DO SUPORTE QUE PODEM TE AJUDAR </p>
-                <div className="dicasVideo">
-                    <img src={imagemCont1} alt="" />
-                    <img src={imagemCont2} alt="" />
-                    <img src={imagemCont3} alt="" />
+                <p>Veja alguns vídeos para revisar seu automóvel</p>
+
+                <div className="videos">
+                    <CardVideo descricao="Teste o acelerador do seu veículo agora!" imagemVideo="../../public/vAcelerador.png"></CardVideo>
+                    <CardVideo descricao="Teste o acelerador do seu veículo agora!" imagemVideo="../../public/vAcelerador.png"></CardVideo>
+                    <CardVideo descricao="Teste o acelerador do seu veículo agora!" imagemVideo="../../public/vAcelerador.png"></CardVideo>
                 </div>
-            </div>
         </DivVideoRevisao>
     )
 }

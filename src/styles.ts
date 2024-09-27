@@ -1,35 +1,58 @@
 import styled from "styled-components";
 import { DivBannerProps } from "./types";
 
+
 export const HeaderCabecalho = styled.header`
     display: flex;
     flex-direction: column;
+    
 `
 
 export const DivBanner = styled.div<DivBannerProps>`
+    /* @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap'); */
     background-image: ${({ imagemFundo }) =>
         `linear-gradient(rgba(0, 89, 153, 0.384), rgba(0, 30, 51, 0.37)), url(${imagemFundo})`};
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    min-height: 50vh;
+    min-height: 95vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: right;
     justify-content: center;
     gap:5px;
+    padding: 5vw;
+
 
     h1 {
-        font-size: 50px;
+        font-size: 60px;
         color: #fff;
         text-transform:uppercase;
     }
 
     p {
-        font-size: 22px;
+        font-size: 25px;
         color: #fff;
         opacity: 50%;
+
+    }
+
+    button{
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        height: 20px;
+        width: 20vw;
+        padding: 20px;
+        background-color: #52aee0;
+        border-radius: 15px;
+
+        color: #ffffff;
+        margin-top: 10vh;
+    }
+    button:hover{
+        cursor: pointer;
     }
 
     @media screen and (max-width: 768px) {
@@ -44,10 +67,13 @@ export const DivBanner = styled.div<DivBannerProps>`
 `
 
 export const NavMenu = styled.nav`
+    width: 100%;
     background-color: #00345A;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    z-index: 2;
 
     img {
         margin-left: 20px;
@@ -60,6 +86,7 @@ export const NavMenu = styled.nav`
         display: flex;
         align-items: center;
         justify-content: space-between;
+
 
         div {
             display: flex;
@@ -100,7 +127,7 @@ export const NavMenu = styled.nav`
 `
 
 export const MainPags = styled.main`
-    background-color: white;
+    background-color: #f6f6f8;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
@@ -277,7 +304,7 @@ export const SecFormLogin = styled.section`
     background-color: #074C7E;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 800px;
     align-items: center;
     align-self: center;
     gap: 50px;
@@ -302,6 +329,11 @@ export const SecFormLogin = styled.section`
             display: flex;
             align-items: center;
             gap: 20px;
+        }
+
+        .bloco{
+            background-color: #074C7E;
+            border-bottom: 2px solid white;
         }
 
         .campo-texto {
@@ -639,7 +671,7 @@ export const DivOpcoes1 = styled.div`
     align-items: center;
     justify-content: center;
     margin-bottom: 40px;
-
+    background-color: #f6f6f8;
     .container{
         display: flex;
         width: 100%;
@@ -647,26 +679,55 @@ export const DivOpcoes1 = styled.div`
         align-items: center;
         justify-content: center;
         margin-bottom: 10vh;
+
     }
     .itemOpcao{
         display: flex;
         flex-direction: column;
-        color: #00345A;
+        align-items: center;
+        background-color: #ffffff;
+        margin: 80px;
+        padding: 30px;
+        height: 50vh;
+        width: 18vw;
+        justify-content: center;
+        border-radius: 15px;
+        box-shadow: 2px 2px  gray;
+    }
+
+    .itemOpcao:hover{
+        cursor: pointer;
+    }
+    
+
+    .itemOpcao:active{
+        background-color: #ececec;
     }
 
     h2{
-        color: #2086DA; 
+        color: #051e67; 
         font-size: 45px;
         margin: 10vh;
+        span{
+            color: #52aee0;
+        }
+    }
+
+    h3{
+        color:#52aee0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        font-size: 22px;
+    }
+
+    p{
+        font-size: 20px;
     }
 
     img{
-        background-color: #8DD1F1;
-        height: 200px;
-        width: 200px;
+        height: 100px;
+        width: 100px;
         padding: 5px;
-        margin: 5px;
-        border-radius: 100px;
         margin-left: 80px;
         margin-right: 80px;
     }
@@ -700,10 +761,10 @@ export const DivOpcoes1 = styled.div`
 
 export const DivAreaSelecao = styled.div`
     display: flex;
-    background-color: #00345A;
+    background-color: #ffffff;
     padding: 1em;
     align-items: center;
-
+    justify-content: space-between;
 
     button{
         display: flex;
@@ -712,21 +773,24 @@ export const DivAreaSelecao = styled.div`
         height: 20px;
         width: 20vw;
         padding: 20px;
-        background-color: #0094FF;
+        background-color: #ffffff;
         border-radius: 15px;
+        color: #051e67;
         margin-top: 10vh;
-        color: white;
     }
     button:hover{
         cursor: pointer;
-        background-color: #0064FF;
+        background-color: #fcfcfc;
+        
     }
 
+    .linha{
+        border-left: 5px solid gray;
+        padding: 40px;
+    }
     
     img{
-
         height: 300px;
-        width: 300px;
         padding: 5px;
         margin: 5px;
         margin-left: 80px;
@@ -735,16 +799,27 @@ export const DivAreaSelecao = styled.div`
     .lado1{
         flex-direction: column;
         display: flex;
-        color: white;
-        text-align: right;
-        align-items: center;
-        padding-left: 30%;
-        font-size: 30px;
+        align-items: right;
+        padding-left: 20%;
 
     }
 
+    h3{
+        color: #051e67;
+        text-decoration: none;
+        font-size: 35px;
+
+    }
+    p{
+        color: #051e67;
+        font-size: 25px;
+        margin-top: 18px;
+        
+    }
+
     strong{
-        color: #8DD1F1;
+        color: #051e67;
+
     }
 
     @media screen and (max-width: 1080px) {
@@ -786,10 +861,13 @@ export const DivAreaSelecao = styled.div`
 
 export const DivAreaSelecao2 = styled.div`
     display: flex;
-    padding: 1em;
+    padding-top: 5%;
+    padding-bottom: 5%;
     align-items: center;
+    justify-content: space-evenly;
     margin-top: 3%;
     margin-bottom: 3%;
+    background-color: #f6f6f8;
 
 
     button{
@@ -811,25 +889,48 @@ export const DivAreaSelecao2 = styled.div`
 
     
     img{
-        background-color: #8DD1F1;
         height: 300px;
         width: 300px;
         padding: 30px;
         margin: 5px;
-        border-radius: 150px;
         margin-left: 80px;
         margin-right: 80px;
 
+    }
+
+    img:hover{
+        cursor: pointer;
     }
     .lado2{
         flex-direction: column;
         display: flex;
         color: #00345A;
         text-align: left;
-        align-items: center;
-        padding-right: 30%;
-        font-size: 30px;
+        width: 40vw;
+    }
 
+    h3{
+        color: #051e67;
+        text-decoration: none;
+        font-size: 35px;
+
+    }
+    p{
+        color: #051e67;
+        font-size: 25px;
+        margin-top: 18px;
+        
+    }
+
+    .topico{
+        font-size: 20px;
+        margin-top: 30px;
+    }
+    span{
+        background-color: #051e67;
+        color: white;
+        padding: 10px;
+        margin-right: 10px;
     }
 
     strong{
@@ -873,23 +974,208 @@ export const DivAreaSelecao2 = styled.div`
     }
 `
 
+export const DivAreaSelecao3 = styled.div`
+
+    position: relative;
+    img{
+        width: 100%;
+    }
+
+    p{
+        top: 40%;
+        position: absolute;
+        font-size: 35px;
+        padding-right: 50%;
+        padding-left: 7%;
+        color: #051e67;
+    }
+`
+
+export const DivAreaSelecao4 = styled.div`
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    .lado2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    }
+    img{
+        width: 25%;
+    }
+
+    p{
+        top: 40%;
+        padding: 5%;
+        padding-left: 20%;
+        font-size: 35px;
+        color: #051e67;
+    }
+
+    
+    button{
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        height: 20px;
+        width: 20vw;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        border: 2px solid #52aee0;
+        color: #051e67;
+        margin-top: 10vh;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: #fcfcfc;
+    }
+`
+
+export const DivAreaSelecao5 = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f6f8;
+    padding: 5%;
+
+    img{
+        width: 300px;
+    }
+
+    h3{
+        font-size: 35px;
+        margin-bottom: 20px;
+    }
+
+    p{
+        font-size: 30px;   
+        width: 70%;
+    }
+
+    button{
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        height: 20px;
+        width: 20vw;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        border: 2px solid #52aee0;
+        color: #051e67;
+        margin-top: 10vh;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: #fcfcfc;
+    }
+`
+
 // REVISÃO
+
+export const DivBannerRevisao = styled.div<DivBannerProps>`
+    background-image: ${({ imagemFundo }) =>
+        `linear-gradient(rgba(0, 89, 153, 0.384), rgba(0, 30, 51, 0.37)), url(${imagemFundo})`};
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 65vh;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap:5px;
+    padding: 5vw;
+
+
+    h1 {
+        font-size: 60px;
+        color: #fff;
+        text-transform:uppercase;
+    }
+
+    p {
+        font-size: 25px;
+        color: #fff;
+        opacity: 50%;
+
+    }
+
+    button{
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        height: 20px;
+        width: 20vw;
+        padding: 20px;
+        background-color: #52aee0;
+        border-radius: 15px;
+
+        color: #ffffff;
+        margin-top: 5vh;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 768px) {
+        h1 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+`
 
 export const DivInicioRevisao = styled.div`
     display: flex;
-    flex-direction: column;
     text-align: center;
-    align-items: center;
+    align-items: right;
+    background-color: #f6f6f8;
 
-    margin-top: 10vh;
-    h2{
-        color: #2086DA;
-        font-size: 40px;
-        padding-left: 29vw;
-        padding-right: 29vw;
+    .lado2{
+        display: flex;
+        flex-direction: column;
+        align-items: right;
+        width: 100%;
+        justify-content: center;
+        padding: 50px;
+        align-items: center;
+
+        h2{
+        color: #051e67;
+        font-size: 30px;
+        width: 70%;
+        text-align: right;
+
         strong{
             color: #8DD1F1;
         }
+    }
+
+    p{
+        color: #051e67;
+        font-size: 25px;
+        width: 70%;
+        margin-top: 10vh;
+        text-align: right;
+        strong{
+            
+            text-decoration: dashed;
+        }
+    }
+
     }
     button{
         display: flex;
@@ -911,6 +1197,9 @@ export const DivInicioRevisao = styled.div`
         margin: 10px;
         color: #00345A;
         font-size: 15px;
+    }
+    img{
+        width: 40vw;
     }
 
     @media screen and (max-width: 1200px) {
@@ -955,113 +1244,111 @@ export const DivInicioRevisao = styled.div`
 
 `
 
-export const DivVideoRevisao = styled.div`
-    background-color: #8DD1F1;
+export const DivDicaRevisao = styled.div`
     display: flex;
-    padding-top: 4vh;
-    padding-bottom: 4vh;
-    padding-right: 8px;
-    padding-left: 8px;
-    justify-content: center;
-    margin-top: 10vh;
+    flex-direction:column;
     align-items: center;
-    margin-bottom: 20vh;
+    justify-content: center;
+    color: #051e67;
+    background-color: #ffffff;
+
+    h3{
+        margin-top: 10vh;
+        font-size: 30px;
+        text-decoration: dashed;
+    }
+
     .container{
-        text-align: center;
-        p{
-            font-size: 20px;
-            margin-bottom: 5vh;
-        }
-    }
-    
-    img{
-        width: 180px;
-        height: 180px;
-
-    }
-
-    .dicasVideo{
-        width: 70vw;
-
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
-        padding-left: 70px;
-        padding-right: 70px;
-        flex-wrap: wrap;
+        justify-content: right;
         img{
-            width: 180px;
-            height: 180px;
-            margin: 10px;
-            border-radius: 12px;
-            
+            width: 40vw;
+            justify-content: right;
+
         }
-        img:hover{
-                cursor: pointer;
-                opacity: 50%;
+
+        .topicos{
+            width: 100%;
+            padding-left: 20vw;
+            .topico{
+                margin: 50px;
+                font-size: 25px;
+                width: 70%;
             }
-    }
-
-    @media screen and (max-width: 1080px) {
-
-        .container p{
-            font-size: 18px;
-            margin-bottom: 5vh;
-        }
-
-        img{
-        width: 140px;
-        height: 140px;
-        }
-        .dicasVideo{
-        width: 80vw;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        padding-left: 3vw;
-        padding-right: 5vw;
-        flex-wrap: wrap;
-
-        img{
-            width: 150px;
-            height: 150px;
-            margin: 8px;
-            border-radius: 12px;
-            
-        }
-    }
-    }
-
-    @media screen and (max-width: 780px) {
-
-        .container p{
-            font-size: 13px;
-            margin-bottom: 3vh;
-            padding: 1px;
-        }
-
-        img{
-        width: 120px;
-        height: 120px;
-        }
-        .dicasVideo{
-            width: 80vw;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-
-            img{
-                width: 100px;
-                height: 100px;
-                border-radius: 12px;
-                
+            span{
+                background-color: #051e67;
+                color: white;
+                padding: 5px;
+                margin-right: 10px;
+                padding-left: 10px;
+                padding-right: 10px;
             }
         }
     }
 
 `
 
+export const DivVideoRevisao = styled.div`
+    display: flex;
+    flex-direction: column;
+    background-color: #051e67;
+    align-items: center;
+    padding: 5%;
+    height: 70vh;
+    
+    .videos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+    }
+    p{
+        font-size: 30px;
+        color: white;
+    }
+
+`
+
+
+
+export const DivCardVideo = styled.dialog`
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+    height: 290px;
+    width: 270px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    align-items: center;
+    margin-top: 5vh;
+    p{
+        padding:20px;
+        font-size: 20px;
+        color: #051e67;
+    }
+
+    img{
+        width: 270px;
+    }
+
+    button{
+        border: 2px solid #52aee0;
+        padding: 5px;
+        width: 50%;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    button:hover{
+        background-color: #e9e7e7;
+        cursor: pointer;
+    }
+
+`
 export const DialogPerguntas = styled.dialog`
     background-color: #00345A;
     width: 60vw;
@@ -1503,6 +1790,7 @@ export const DivWatson = styled.div`
 `
 
 export const MainDiagnostico = styled.main`
+margin-top: 10vh;
     background-color: white;
     flex-grow: 1;
     display: flex;
@@ -1560,4 +1848,16 @@ export const PerfilStyle = styled.div`
         background-color: #dfdfdf;
         padding: 5px;
     }
+`
+
+// GERAR PDF
+
+export const DivPDF = styled.div`
+
+.margemSuperior{
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+    background-color: #051838;
+}
 `

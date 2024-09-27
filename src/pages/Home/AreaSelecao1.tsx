@@ -10,7 +10,10 @@ export default function AreaSelecao1({inicioConteudo, finalConteudo, conteudoMar
     return(
         <DivAreaSelecao>
             <div className="lado1">
-                <h3>{inicioConteudo}<strong>{conteudoMarcado}</strong>{finalConteudo}</h3>
+                <div className="linha">
+                    <h3>{inicioConteudo}<strong>{conteudoMarcado}</strong></h3>
+                    <p>{finalConteudo}</p>
+                </div>
                 <button onClick={irParaPagina}>{textoBotao}</button>
             </div>
             <img src={imagem} alt="texto de funcionalidade" />

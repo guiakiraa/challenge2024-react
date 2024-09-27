@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { DialogResp } from "../../styles";
 import { RespostaProps } from "../../types";
+import LaudoRevisao from "./LaudoRevisao";
 
 export default function Resposta({ dialogRef, problemaProps, onClose }: RespostaProps) {
     useEffect(() => {
@@ -20,6 +21,7 @@ export default function Resposta({ dialogRef, problemaProps, onClose }: Resposta
                 <div className="divBotao">
                     <button className="btn" onClick={onClose}>Fechar</button> 
                 </div>
+                <LaudoRevisao problemaProps={problemaProps}></LaudoRevisao>
             </div>
         </DialogResp>
     );

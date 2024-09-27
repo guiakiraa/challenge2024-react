@@ -2,6 +2,7 @@ export type BannerProps = {
     fundoUrl?: string;
     titulo: string;
     paragrafo?: string;
+    textoBotao: string;
 }
 
 export type DivBannerProps = {
@@ -75,12 +76,25 @@ export type AreaSelecaoProps = {
     irPara: string;
 }
 
+export type AreaSelecao3Props = {
+    imagem: string;
+    texto: string;
+}
+export type AreaSelecao4Props = {
+    imagem: string;
+    texto: string;
+    textoBotao: string;
+}
+export type AreaSelecao5Props = {
+    titulo: string;
+    imagem: string;
+    texto: string;
+    textoBotao: string;
+}
+
 export type RevisaoVideoProps = {
-    imagem:string;
-    imagemCont1:string;
-    imagemCont2:string;
-    imagemCont3:string;
-    conteudo:string;
+    imagemVideo:string;
+    descricao:string;
 }
 
 export type formRevisao = {
