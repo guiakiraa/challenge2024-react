@@ -1861,3 +1861,33 @@ export const DivPDF = styled.div`
     background-color: #051838;
 }
 `
+
+export const SecAjuda = styled.section`
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+    background-color: #8DD1F1;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    h1{
+        font-size: 40px;
+        text-align: center;
+        color: white;
+    }
+
+    h2{
+        color: #00345A
+    }
+
+    a {
+        padding: 15px 25px;
+        text-decoration: none;
+        color: #00345A;
+        font-weight: 600;
+        background-color: #0094FF;
+    }
+
+`

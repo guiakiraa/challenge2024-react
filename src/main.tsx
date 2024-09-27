@@ -14,6 +14,7 @@ import Historico from './pages/Historico/index.tsx'
 import Perfil from './pages/Perfil/index.tsx'
 import CadastroEndereco from './pages/CadastroEndereco/index.tsx'
 import Diagnostico from './pages/Diagnostico/index.tsx'
+import Ajuda from './pages/Ajuda/index.tsx'
 
 const router = createBrowserRouter([
   {
@@ -60,7 +61,11 @@ const router = createBrowserRouter([
       {
         path:'/perfil',
         element: <Perfil />
-      }
+      },
+      {
+        path: '/ajuda',
+        element: <Ajuda />
+      },
     ]
   }
 ])
