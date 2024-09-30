@@ -2011,6 +2011,7 @@ export const SecAjuda = styled.section`
         font-size: 40px;
         text-align: center;
         color: white;
+        margin: 50px;
     }
 
     h2{
@@ -2023,6 +2024,7 @@ export const SecAjuda = styled.section`
         color: #00345A;
         font-weight: 600;
         background-color: #0094FF;
+        margin: 50px;
     }
 
 `
