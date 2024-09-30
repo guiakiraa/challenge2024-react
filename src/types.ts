@@ -53,7 +53,8 @@ export type FormularioCarroProps = {
 export type RegistroProps = {
     data: string;
     preco: number;
-    carro: string;
+    marca: string;
+    modelo: string;
     ano: number;
     placa: string;
     diagnostico: string;
@@ -122,4 +123,8 @@ export type ConfirmacaoProps ={
 }
 export type ErroProps ={
     imagem: string;
+}
+
+export type NavegarParaProps = {
+    irPara: string;
 }

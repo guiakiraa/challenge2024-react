@@ -5,7 +5,7 @@ export default function CabecalhoRevisao(){
     return(
         <header>
             <Menu />
-            <BannerRevisao imagemFundo="../../public/fundoRevisao.png"/>
+            <BannerRevisao imagemFundo= "../../public/fundoRevisao.png"/>
         </header>
     )
 }

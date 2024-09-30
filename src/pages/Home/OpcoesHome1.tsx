@@ -20,8 +20,8 @@ export default function OpcoesHome1({logo1, logo2, logo3}: OpcoesPrincipalProps)
         <DivOpcoes1>
             <h2>Trilhando um caminho mais <span>seguro</span></h2>
             <div className="container">    
-                <div id="diagnostico" className="itemOpcao">
-                    <img src={logo2} alt="diagnóstico automotivo" onClick={irParaRevisao}/>
+                <div id="diagnostico" className="itemOpcao"  onClick={irParaRevisao}>
+                    <img src={logo2} alt="diagnóstico automotivo"/>
                     <h3>REVISÃO</h3>
                     <p>Revise seu veículo para identificar problemas</p>
                 </div>

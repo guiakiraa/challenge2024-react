@@ -592,6 +592,112 @@ export const SecHistorico = styled.section`
     }
 `
 
+export const DivHistoricoCabec = styled.div`
+background-image: ${({ imagemFundo }) =>
+        `linear-gradient(rgba(0, 89, 153, 0.384), rgba(0, 30, 51, 0.37)), url(${imagemFundo})`};
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap:5px;
+    padding: 5vw;
+
+
+    h1 {
+        font-size: 60px;
+        color: #fff;
+        text-transform:uppercase;
+    }
+
+    p {
+        font-size: 25px;
+        color: #fff;
+        opacity: 50%;
+
+    }
+
+    @media screen and (max-width: 768px) {
+        h1 {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+
+`
+
+export const DivCardHistorico = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: left;
+    img{
+        background-color: #051e67;
+        border-radius: 10px;
+        width: 200px;
+        height: 170px;
+    }
+
+    img:hover{
+        cursor: pointer;
+        background-color: #053e67;
+    }
+
+    p{
+        color: #051e67;
+        width: 200px;
+        margin: 5px;
+        font-size: 15px;
+        strong{
+            color: #52aee0;
+        }
+     }
+`
+export const DivDiagnosticoHistorico = styled.div`
+    display: flex;
+    background-color: #ffffff;
+    padding: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+`
+
+export const DivAdicionarDiagnostico = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    border-radius: 10px;
+    border: 3px solid #051e67;
+    width: 200px;
+    color: #051e67;
+    height: 170px;
+    cursor: pointer;
+
+
+`
+
+export const DivHistorico = styled.div`
+    h2{
+        color: #051e67;
+        margin: 100px;
+    }
+    h3{
+        background-color: #ffffff;
+        width: 100%;
+        padding: 50px;
+        font-size: 25px;
+        color: #051e67;
+    }
+`
+
 export const FooterRodape = styled.footer`
     padding: 20px;
     background-color: #00345A;
@@ -1087,7 +1193,7 @@ export const DivBannerRevisao = styled.div<DivBannerProps>`
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 65vh;
+    height: 50vh;
     min-height: 30vh;
     display: flex;
     flex-direction: column;
@@ -1110,7 +1216,7 @@ export const DivBannerRevisao = styled.div<DivBannerProps>`
 
     }
 
-    button{
+    #iniciar{
         display: flex;
         justify-content: center; 
         align-items: center; 
@@ -1119,7 +1225,6 @@ export const DivBannerRevisao = styled.div<DivBannerProps>`
         padding: 20px;
         background-color: #52aee0;
         border-radius: 15px;
-
         color: #ffffff;
         margin-top: 5vh;
     }
@@ -1143,6 +1248,8 @@ export const DivInicioRevisao = styled.div`
     text-align: center;
     align-items: right;
     background-color: #f6f6f8;
+    margin-top: 10%;
+    margin-bottom: 10%;
 
     .lado2{
         display: flex;
@@ -1263,7 +1370,7 @@ export const DivDicaRevisao = styled.div`
         align-items: center;
         justify-content: right;
         img{
-            width: 40vw;
+            width: 35vw;
             justify-content: right;
 
         }
@@ -1350,74 +1457,87 @@ export const DivCardVideo = styled.dialog`
 
 `
 export const DialogPerguntas = styled.dialog`
-    background-color: #00345A;
+    background-color: #ffffff;
     width: 60vw;
-    height: 60vh;
     border: none;
-    padding: 50px;
     border-radius: 10px;
-    margin-top: 20vh;
+    margin-top: 10vh;
     margin-left: 20vw;
     margin-right: 20vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-
+    &::backdrop{
+        background-color: black;
+        opacity: 60%;
+    }
 
     h2{
-        color: white;
-        text-align: center;
-        font-size: 20px;
-    }
-    .btnSair{
-        color: #8DD1F1;
-        background-color: #00345A;
-        border: none;
+        color: #051e67;
         font-size: 15px;
-        margin-top: 5vh;
     }
-    .btnSair:hover{
-        color: white;
-        cursor: pointer;
+    
+    p{
+        color: #0094FF;
+        opacity: 100%;
+        font-size: 30px;
+        text-align: center;
     }
-
     .container{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
         height: 100%;
+        padding: 10%;
     }
 
-    p{
+    #sim{
+        background-color: #0094FF;
         margin-top: 5vh;
-        color: #8DD1F1;
-        font-size: 30px;
-        text-align: center;
+
     }
 
-    .resp{
-        width: 100%;
+    #nao{
+        background-color: #ff5757;
+        margin-top: 2vh;
+
+    }
+
+    #divSair{
         display: flex;
-        justify-content: space-evenly;
+        width: 100%;
+        justify-content: end;
 
+        img{
+            width: 50px;
+            height: 50px;
+            margin-top: 30px;
+            margin-right: 30px;
+        }
+        #sair{
+            border: none;
+            background-color: #ffffff;
+        }
     }
+
+
     .btn{
         display: flex;
-        justify-content: center;
+        justify-content: center; 
         align-items: center; 
-        width: 200px;
-        height: 70px;
-        padding: 7px;
-        background-color: #0094FF;
-        border-radius: 10px;
-        margin-top: 70px;
-        color: white;
-        font-size: 15px;
+        height: 20px;
+        width: 20vw;
+        padding: 20px;
+        background-color: #52aee0;
+        border-radius: 15px;
+        color: #ffffff;
     }
 
-    .btn:hover{
-        background-color: #0064FF;
-        cursor: pointer;
+
+    img{
+        height: 150px;
+        margin-bottom: 8%;
     }
+    
     @media screen and (max-width: 1080px) {
 
     padding: 40px;
@@ -1476,29 +1596,43 @@ export const DialogPerguntas = styled.dialog`
 `
 
 export const DialogResp = styled.dialog`
-
     display: flex;
-    flex-direction: column;
-    background-color: #00345A;
+    background-color: #ffffff;
     width: 60vw;
-    height: 60vh;
+    height: 80vh;
     border: none;
-    padding: 40px;
     border-radius: 10px;
-    margin-top: 20vh;
+    margin-top: 10vh;
     margin-left: 20vw;
     margin-right: 20vw;
-    align-items: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+
+    &::backdrop{
+        background-color: black;
+        opacity: 60%;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img{
+            height: 100px;
+            margin-bottom: 8%;
+        }
+    }
     .btn:hover{
-        background-color: #0064FF;
         cursor: pointer;
     }
 
     h2{
-        color: white;
+        color: #00345A;
         text-align: center;
         font-size: 20px;
+        opacity: 100%;
     }
 
     p{
@@ -1506,21 +1640,21 @@ export const DialogResp = styled.dialog`
         color: #8DD1F1;
         font-size: 30px;
         text-align: center;
+        opacity: 100%;
     }
 
-    .btn{
+    #fechar{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 170px;
-        height: 70px;
+        width: 150px;
+        height: 30px;
         padding: 20px;
         background-color: #0094FF;
         border-radius: 10px;
-        margin-top: 50px;
+        margin-top: 100px;
         color: white;
         gap: 1;
-
     }
 
 
@@ -1530,7 +1664,7 @@ export const DialogResp = styled.dialog`
     }
 
     ul{
-        color: white;
+        color: #00345A;
         font-size: 20px;
         margin-top: 60px;
         margin-left: 10%;
@@ -1600,8 +1734,13 @@ export const DialogConfirmacao = styled.dialog`
     border-radius: 10px;
     margin-top: 42vh;
     width: 500px;
-    height: 180px;
+    height: 220px;
     margin-left: 30vw;
+
+    &::backdrop{
+        background-color: black;
+        opacity: 60%;
+    }
 
 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
@@ -1615,6 +1754,7 @@ export const DialogConfirmacao = styled.dialog`
     p{
         padding: 20px;
         font-size: 15px;
+        color: #00345A;
         text-align: left;
     }
 
@@ -1813,8 +1953,8 @@ margin-top: 10vh;
 
 export const PerfilStyle = styled.div`
     display: flex;
-    margin-top: 10vh;
-    background-color: #8DD1F1;
+    flex-direction: column;
+    margin-top: 20vh;
     align-items: center;
     justify-content: center;
     .user{
@@ -1823,9 +1963,11 @@ export const PerfilStyle = styled.div`
         align-items: center;
         flex-direction: column;
         padding: 50px;
+        border: 3px solid #051e67;
+        border-radius: 100%;
     }
     img{
-        height: 30vh;
+        height: 20vh;
     }
     p{
         margin: 10px;
@@ -1837,15 +1979,8 @@ export const PerfilStyle = styled.div`
         color: grey;
     }
 
-    input{
-        background-color: #D9D9D9;
-        font-size: 20px;
-        padding: 10px;
-    }
-
     h3{
         font-size: 20px;
-        background-color: #dfdfdf;
         padding: 5px;
     }
 `
