@@ -1461,7 +1461,7 @@ export const DialogPerguntas = styled.dialog`
     width: 60vw;
     border: none;
     border-radius: 10px;
-    margin-top: 10vh;
+    margin-top: 5vh;
     margin-left: 20vw;
     margin-right: 20vw;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);

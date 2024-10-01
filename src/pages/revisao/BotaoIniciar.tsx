@@ -15,7 +15,9 @@ export default function BotaoIniciar(){
     const perguntas = [
         { orientacao: "1. Segure o acelerador do veículo.", pergunta: "Ele apresentou algum ruído?", tipoProblema: "Ruído ao acelerar" },
         { orientacao: "2. Ligue as palhetas do limpador de para-brisa.", pergunta: "Apresentou algum trepidação ou ruído estranho?", tipoProblema: "Ruído nas palhetas" },
-        { orientacao: "3. Vá para um lugar amplo.", pergunta: "Dirija devagar com o automóvel. Ao soltar o volante, o carro desvia para a direita ou esquerda?", tipoProblema: "Alinhamento do automóvel" }
+        { orientacao: "3. Vá para um lugar amplo.", pergunta: "Dirija devagar com o automóvel. Ao soltar o volante, o carro desvia para a direita ou esquerda?", tipoProblema: "Alinhamento do automóvel" },
+        { orientacao: "4. Peça ajuda a alguem e vá para um local amplo.", pergunta: "Ao engatar a marcha ré, ambas as luzes (ou apenas uma) de ré permanecem apagadas?", tipoProblema: "Lanterna traseira ré" },
+        { orientacao: "5. Vamos verificar o óleo do carro.", pergunta: "Após esfriar o motor, retire a vareta de óleo, limpe e a insira. O óleo está fora da marcação mínima e máxima?", tipoProblema: "Alinhamento do automóvel" },
     ];
 
     useEffect(() => {

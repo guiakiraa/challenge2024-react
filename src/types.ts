@@ -50,14 +50,25 @@ export type FormularioCarroProps = {
     quilometragem: number;
 }
 
-export type RegistroProps = {
-    data: string;
-    preco: number;
+export type DiagnosticDtoProps = {
     marca: string;
     modelo: string;
     ano: number;
-    placa: string;
     diagnostico: string;
+    orcamento_previsto: number;
+    preco_peca: number;
+    session_id: string;
+    timestamp: number; 
+    placa: string;
+}
+
+export type HistoricoProps = {
+    carro: string;
+    ano: number;
+    diagnostico: string;
+    orcamento: string;
+    data: string;
+    placa: string;
 }
 
 // TYPES HOME

@@ -1,4 +1,5 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, Route } from "react-router-dom"
+import WatsonChat from "./pages/Diagnostico/WatsonChat"
 
 function App() {
 

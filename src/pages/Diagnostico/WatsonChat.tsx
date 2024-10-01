@@ -12,6 +12,7 @@ const WatsonChat = () => {
       integrationID: "eedef28f-76b9-47fe-ba3c-8be2e858296a", // Substitua pelo seu ID de integração
       region: "au-syd", // Substitua pela sua região
       serviceInstanceID: "18b8ce04-0089-42bc-b80b-7e861741fe82", // Substitua pelo ID da sua instância
+      // openChatByDefault: true,
       onLoad: async (instance:any) => {
         await instance.render();
       }

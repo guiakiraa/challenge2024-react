@@ -11,7 +11,7 @@ export default function Diagnostico(){
         <Menu/>
         <MainDiagnostico>
         <Chat></Chat>
-        <WatsonChat></WatsonChat>
+        <WatsonChat/>
         </MainDiagnostico>
         <Rodape />
     </>

@@ -1,39 +1,36 @@
+import { useEffect, useState } from "react";
 import { DivDiagnosticoHistorico, DivHistorico } from "../../styles";
-import { RegistroProps } from "../../types";
 import AdicionarDiagnostico from "./AdicionarDiagnostico";
 import CardRegistro from "./CardRegistro";
+import { DiagnosticDtoProps } from "../../types";
 
 export default function AbaDiagnostico(){
 
-    const historico:RegistroProps[] = [
-        {
-            data: '26 de fevereiro de 2024',
-            preco: 250.0,
-            marca: 'Fiat',
-            modelo: 'UNO',
-            ano: 2007,
-            placa: 'RIO2A18',
-            diagnostico: "Superaquecimento"
-        },
-        {
-            data: '08 de outubro de 2024',
-            preco: 600,
-            marca: 'Fiat',
-            modelo: 'UNO',
-            ano: 2020,
-            placa: "BRO8X09",
-            diagnostico: "Problema no câmbio"
-        },
-        {
-            data: '10 de setembro de 2024',
-            preco: 500,
-            marca: 'Fiat',
-            modelo: 'UNO',
-            ano: 2020,
-            placa: "BRO8X09",
-            diagnostico: "Problema nas Velas"
-        }
-    ]
+    const [dataList, setDataList] = useState<DiagnosticDtoProps[]>([]); // Lista para armazenar os objetos
+
+    // Função para fazer a requisição e adicionar o resultado à lista
+    const fetchDataAndAddToList = () => {
+      const requestOptions: RequestInit = {
+        method: 'GET',
+        redirect: 'follow',
+      };
+  
+      fetch('/api/cors/diagnosticos', requestOptions)
+        .then((response) => response.json()) // Supondo que a resposta seja JSON
+        .then((result) => {
+          // Verifica se a resposta contém o array de diagnósticos
+          if (result && result.diagnosticos) {
+            // Adiciona o array de diagnósticos à lista existente
+            setDataList(result.diagnosticos);
+          }
+        })
+        .catch((error) => console.error('Erro ao buscar dados:', error));
+    };
+  
+    // Usa o useEffect para fazer a requisição quando o componente for montado
+    useEffect(() => {
+      fetchDataAndAddToList(); // Faz a requisição ao carregar o componente
+    }, []); // Executa a requisição quando o componente for montado
 
     return(
         <DivHistorico>
@@ -41,18 +38,17 @@ export default function AbaDiagnostico(){
             <h3>Diagnóstico</h3>
             <DivDiagnosticoHistorico>
             {
-                historico.map((reg, index) => (
-                    <CardRegistro key={index} 
-                        data={reg.data} 
-                        preco={reg.preco} 
-                        marca={reg.marca}  
-                        modelo={reg.modelo}  
-                        ano={reg.ano}
-                        placa={reg.placa}
-                        diagnostico={reg.diagnostico}
-                    />
-                ))
-            }
+                        dataList.map((reg, index) => (
+                            <CardRegistro key={index} 
+                                data={new Date(reg.timestamp * 1000).toLocaleString()} 
+                                orcamento={reg.orcamento_previsto.toFixed(2)} 
+                                carro={reg.marca + " " + reg.modelo}
+                                ano={reg.ano}
+                                placa={reg.placa}
+                                diagnostico={reg.diagnostico}
+                            />
+                        ))
+                    }
 
                 <AdicionarDiagnostico irPara="/diagnostico"/>
             </DivDiagnosticoHistorico>

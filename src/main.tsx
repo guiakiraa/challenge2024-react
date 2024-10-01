@@ -15,6 +15,7 @@ import Perfil from './pages/Perfil/index.tsx'
 import CadastroEndereco from './pages/CadastroEndereco/index.tsx'
 import Diagnostico from './pages/Diagnostico/index.tsx'
 import Ajuda from './pages/Ajuda/index.tsx'
+import WatsonChat from './pages/Diagnostico/WatsonChat.tsx'
 
 const router = createBrowserRouter([
   {
